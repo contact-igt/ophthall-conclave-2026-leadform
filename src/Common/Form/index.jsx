@@ -97,8 +97,8 @@ const Form = ({ handleTogglecontactForm }) => {
   return (
     <div className={styles.formContainer}>
       <div className={styles.formTopic}>
-        <h4>Join the Conference</h4>
-        <p>India’s premier ophthalmology conference.</p>
+        <h4>Conference Register Form</h4>
+        {/* <p>India’s premier ophthalmology conference.</p> */}
       </div>
       <form onSubmit={formik.handleSubmit}>
         <div className={styles.inputgrp}>

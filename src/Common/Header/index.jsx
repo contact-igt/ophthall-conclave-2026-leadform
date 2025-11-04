@@ -25,7 +25,7 @@ const Header = ({handleTogglecontactForm}) => {
               className={styles.image}
             />
           </div>
-          <div
+         {router.pathname !== "/thank-you" && <div
             className={styles.buttonGroup}
             onClick={() => {
               dispatch(setActiveStepNumber(1));
@@ -37,7 +37,7 @@ const Header = ({handleTogglecontactForm}) => {
               bgcolor={"#00A0E3"}
               handleTogglecontactForm={handleTogglecontactForm}
             />
-          </div>
+          </div>}
         </div>
       </div>
     </header>
