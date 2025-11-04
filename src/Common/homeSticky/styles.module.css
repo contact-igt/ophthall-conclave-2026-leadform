@@ -80,7 +80,7 @@
   text-decoration-color: red;
 }
 
-.pricebtn > a {
+.pricebtn > button {
   position: relative;
   display: inline-block;
   overflow: hidden;
@@ -99,7 +99,7 @@
     /* deep curved drop */ -4px -4px 12px rgba(0, 160, 227, 0.15); /* soft teal glow */
 }
 
-.pricebtn > a::before {
+.pricebtn > button::before {
   content: "";
   position: absolute;
   top: 0;
@@ -125,7 +125,7 @@
   }
 }
 
-.pricebtn > a:hover {
+.pricebtn > button:hover {
   background-color: rgb(22, 55, 66);
   transform: scale(1.05);
 }
@@ -133,7 +133,7 @@
   width: 100%;
 }
 
-.meuntitle h5 a {
+.meuntitle h5 button {
   background-color: #ffd700;
   color: #000;
   padding: 6px 14px;
@@ -178,7 +178,7 @@
   .meuntitle h5 {
     font-size: 1.05em;
   }
-  .meuntitle h5 a {
+  .meuntitle h5 button {
     font-size: 1.05em;
     padding: 5px 12px;
   }
@@ -193,7 +193,7 @@
   .newPrice {
     order: 2;
   }
-  .pricebtn > a {
+  .pricebtn > button {
     padding: 12px 20px;
     font-size: 0.75rem;
   }
@@ -218,7 +218,7 @@
     margin-bottom: 5px;
     font-size: 19px;
   }
-  .pricebtn > a {
+  .pricebtn > button{
     width: 100%;
   }
   .pricing .oldPrice {
@@ -234,8 +234,9 @@
   .meuntitle h5 {
     font-size: 1.05em;
   }
-  .meuntitle h5 a {
+  .meuntitle h5 button {
     font-size: 1.05em;
+    color: #000 !important;
     padding: 4px 10px;
   }
 }
@@ -261,7 +262,7 @@
     margin-bottom: 0 !important;
     margin: 5px 0 !important;
   }
-  .meuntitle h5 a {
+  .meuntitle h5 button {
     font-size: 0.75rem;
     padding: 8px 8px;
   }
@@ -271,7 +272,7 @@
 }
 
 @media (width<400px) {
-  .meuntitle h5 a {
+  .meuntitle h5 button {
     font-size: 0.65rem;
   }
   .meuntitle h6{

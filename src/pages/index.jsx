@@ -1,6 +1,6 @@
 import ConferencePageComponent from "@/PageComponent/Conference";
 
-const Conference = () => {
-  return <ConferencePageComponent />;
+const Conference = ({handleTogglecontactForm}) => {
+  return <ConferencePageComponent handleTogglecontactForm={handleTogglecontactForm} />;
 };
 export default Conference;

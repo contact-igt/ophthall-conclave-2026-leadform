@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 import { setActiveStepNumber } from "@/redux/slices/auth/authSlice";
 import { useDispatch } from "react-redux";
 
-const JoinOphthall = ({ data,title }) => {
+const JoinOphthall = ({ data, title, handleTogglecontactForm }) => {
   const dispatch = useDispatch();
 
   return (
@@ -17,18 +17,12 @@ const JoinOphthall = ({ data,title }) => {
             <p className={styles.description1}>{data?.description}</p>
           </div>
           <div className={`${styles.buttonGroup} d-flex gap-3`}>
-            <a
-              href="/register"
-              onClick={() => {
-                dispatch(setActiveStepNumber(1));
-              }}
-            >
               <button
+                onClick={handleTogglecontactForm}
                 className={`btn fw-bold bg-black text-white ${styles.button}`}
               >
                 {data?.buttonText}
               </button>
-            </a>
           </div>
         </div>
       </div>

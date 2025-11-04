@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 import { DynamicIcon } from "lucide-react/dynamic";
 import Button from "@/Common/Button";
 
-const ConferenceDetails = ({ data }) => {
+const ConferenceDetails = ({ data, handleTogglecontactForm }) => {
   return (
     <section className={styles.ConferenceDetailSection}>
       <div className="container">
@@ -27,7 +27,7 @@ const ConferenceDetails = ({ data }) => {
 
           <div className={styles.overviewDescription}>
             <div className={styles.descinfo}>
-              <h6>{data?.price}</h6>
+              {/* <h6>{data?.price}</h6> */}
               <p>{data?.description}</p>
               <p>{data?.highlight}</p>
             </div>
@@ -68,7 +68,7 @@ const ConferenceDetails = ({ data }) => {
             title={"Register Now"}
             bgcolor={"#00a0e3"}
             colors={"#fff"}
-            link={"/register"}
+            handleTogglecontactForm={handleTogglecontactForm}
           />
         </div>
       </div>
