@@ -125,7 +125,7 @@ const EventCard = ({
                   <span className={styles.durationText}>{event.duration}</span>
                 </div>
               </div>
-              <div
+              {/* <div
                 className={`d-flex flex-row flex-md-row align-items-start align-items-md-center gap-3`}
               >
                 <div className={styles.priceContainer}>
@@ -137,7 +137,7 @@ const EventCard = ({
                   <h6 className="m-0">{`Non-Life Member : `}</h6>
                   <h6>₹ {non_member_amount}</h6>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="d-flex flex-column gap-2">

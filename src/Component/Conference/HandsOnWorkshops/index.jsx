@@ -4,7 +4,6 @@ import EventCard from "@/Common/EventCard";
 import Title from "@/Common/Title";
 
 const HandsOnWorkshops = ({ data, workshopsData }) => {
-
   return (
     <section id="workshop" className={`${styles.container} container-fluid`}>
       <div className={`${styles.contentContainer} container-lg`}>

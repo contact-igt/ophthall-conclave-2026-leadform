@@ -27,7 +27,7 @@ const ConferenceDetails = ({ data }) => {
 
           <div className={styles.overviewDescription}>
             <div className={styles.descinfo}>
-              <h6>{data?.price}</h6>
+              {/* <h6>{data?.price}</h6> */}
               <p>{data?.description}</p>
               <p>{data?.highlight}</p>
             </div>
