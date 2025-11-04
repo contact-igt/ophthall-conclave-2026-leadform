@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import styles from "./styles.module.css";
 import { useDispatch } from "react-redux";
 import { DynamicIcon } from "lucide-react/dynamic";
-const ConferenceBanner = ({ data, sperakerLength }) => {
+const ConferenceBanner = ({ data, sperakerLength, handleTogglecontactForm }) => {
   const handleScrollToSpeaker = () => {
     const speakerSection = document.getElementById("speakers");
     if (speakerSection) {
@@ -47,14 +47,13 @@ const ConferenceBanner = ({ data, sperakerLength }) => {
           <p className={styles.description1}>{data?.description}</p>
 
           <div className={styles.tagContainer}>
-            <a href="/register">
-              <button
-                style={{ backgroundColor: "#00a0e3" }}
-                className={`btn fw-bold  text-white ${styles.button}`}
-              >
-                {data?.buttonText}
-              </button>
-            </a>
+            <button
+              onClick={handleTogglecontactForm}
+              style={{ backgroundColor: "#00a0e3" }}
+              className={`btn fw-bold  text-white ${styles.button}`}
+            >
+              {data?.buttonText}
+            </button>
             {/* <div onClick={handleScrollToVenue} className={styles.tagItem}>
               <DynamicIcon name="map-pin" color="#00a0e3" />
               <p>Navi Mumbai</p>

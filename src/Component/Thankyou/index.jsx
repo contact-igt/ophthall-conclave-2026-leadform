@@ -19,9 +19,9 @@ const Thankyou = () => {
 
       <h1 className={`${styles.title} mt-3 fw-bold`}>Thank you for registering for the Ophthall Conclave 2026</h1>
       <p className={styles.subtitle}>
-        Welcome to <strong>Ophthall Conclave 2026</strong>! Your
-        registration details have been sent to your registered email. Please
-        check your inbox (and spam/junk) for confirmation.
+        Thank you for your interest in <strong>Ophthall Conclave 2026</strong>.
+        Our team will review your registration and get in touch with you soon.
+        We truly appreciate your time and continued support to the ophthalmology community.
       </p>
 
       <div className={`${styles.panels} mt-4`}>
@@ -44,7 +44,7 @@ const Thankyou = () => {
             />
           </div>
         </div>
-                <div className={`${styles.panel} ${styles.panelAlt}`}>
+        <div className={`${styles.panel} ${styles.panelAlt}`}>
           <h4 className={styles.panelTitle}>Connect With Us</h4>
           <div className={styles.socials}>
             <a href="https://www.facebook.com/ophthall/" target="_blank" rel="noreferrer" className={styles.socialBtn} aria-label="Facebook">

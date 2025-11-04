@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Plus Jakarta Sans';
-  src: url('/fonts/PlusJakartaSans[wght].ttf');
+  font-family: "Plus Jakarta Sans";
+  src: url("/fonts/PlusJakartaSans[wght].ttf");
 }
 
 html,
@@ -15,8 +15,8 @@ html,
   --text-gray: #3c3c43;
 }
 
-html{
-  overflow-x: hidden !important; 
+html {
+  overflow-x: hidden !important;
 }
 html,
 body {
@@ -24,8 +24,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   /* overflow-x: hidden !important; */
   width: 100%;
-  font-family: 'Plus Jakarta Sans' !important;
-
+  font-family: "Plus Jakarta Sans" !important;
 }
 
 * {
@@ -71,6 +70,31 @@ a {
   border-bottom: 7px solid #0382f6;
 }
 
+.closeButton {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  background: white;
+  color: #333;
+  border-radius: 50%;
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  z-index: 100;
+}
+.closeButton:hover {
+  background-color: #ff4d4d;
+  color: white;
+  transform: scale(1.1) rotate(90deg);
+}
 .rb {
   margin: 40px 0px;
 }
@@ -92,12 +116,11 @@ a {
 
 .form-control:focus,
 .form-select:focus {
-
   background-color: none !important;
   border-color: none !important;
-  border: 1px solid #E5E5EA !important;
+  border: 1px solid #e5e5ea !important;
   outline: 0;
-  box-shadow: none !important
+  box-shadow: none !important;
 }
 
 .swiper-wrapper {
@@ -129,11 +152,11 @@ a {
   }
 }
 
-@media (max-width:768px){
-  .swiper{
+@media (max-width: 768px) {
+  .swiper {
     height: 260px !important;
   }
-  div.swiper-slide{
+  div.swiper-slide {
     height: 85px !important;
   }
 }

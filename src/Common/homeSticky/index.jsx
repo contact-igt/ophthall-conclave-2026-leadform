@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./styles.module.css";
 
-export const HomeSticky = () => {
+export const HomeSticky = ({handleTogglecontactForm}) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -36,7 +36,7 @@ export const HomeSticky = () => {
             <div className="col-12 col-md-8 d-flex justify-content-center justify-content-md-start align-items-center d-block">
               <div className={styles.meuntitle}>
                 <h5 className="mb-3 text-center">
-                  <a href="/register">Early Bird Offer</a>
+                  <button onClick={handleTogglecontactForm}>Early Bird Offer</button>
                 </h5>
                 <h6>
                 
@@ -50,13 +50,13 @@ export const HomeSticky = () => {
                 className={`${styles.pricingContainer} d-flex justify-content-lg-end justify-content-center  align-items-center gap-2 gap-md-3 py-md-1 py-1`}
               >
                 <div className={styles.pricebtn}>
-                  <a
-                    href="/register"
+                  <button
+                    onClick={handleTogglecontactForm}
                     target="_blank"
                     className={`btn text-light ${styles.button}`}
                   >
                     {"Register Now"}
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>

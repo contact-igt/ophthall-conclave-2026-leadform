@@ -26,9 +26,9 @@ import WelcomeCard from "@/Common/WelcomeCard";
 import { useGetAllEventByConfernceIdQuery } from "@/hooks/useEventQuery";
 import { useGetAllSpeakerByConfernceIdQuery } from "@/hooks/useSpeakerQuery";
 import OpticalExpo from "@/Component/Conference/OpticalExpo";
-const ConferencePageComponent = () => {
+import Form from "@/Common/Form";
+const ConferencePageComponent = ({handleTogglecontactForm}) => {
   const dispatch = useDispatch();
-  const isModalOpen = useSelector((state) => state.auth.isOpen);
   const [session, setsession] = useState();
   const [speakerList, setspeakerList] = useState();
   const [showSticky, setShowSticky] = useState(false);
@@ -97,6 +97,7 @@ const ConferencePageComponent = () => {
       <ConferenceBanner
         data={conferenceData?.banner}
         sperakerLength={speakerList?.length}
+        handleTogglecontactForm={handleTogglecontactForm}
       />
       <AssociatePartner data={conferenceData?.participants} />
       <AboutOphthall
@@ -111,7 +112,7 @@ const ConferencePageComponent = () => {
 
       <Includes />
 
-      <ConferenceDetails data={conferenceData?.conferenceDetails} />
+      <ConferenceDetails data={conferenceData?.conferenceDetails} handleTogglecontactForm={handleTogglecontactForm} />
 
       {data_workshops?.length > 0 ? (
         <HandsOnWorkshops workshopsData={data_workshops} />
@@ -138,13 +139,13 @@ const ConferencePageComponent = () => {
       <JoinOphthall
         data={conferenceData?.joinOphthall}
         title={conference?.title}
+        handleTogglecontactForm={handleTogglecontactForm}
       />
 
-      <Popup open={isModalOpen} onClose={closeModal}>
+      {/* <Popup open={isModalOpen} onClose={closeModal}>
         <WelcomeCard closeModal={closeModal} />
-      </Popup>
-      
-      {showSticky && <HomeSticky />}
+      </Popup> */}
+      {showSticky && <HomeSticky handleTogglecontactForm={handleTogglecontactForm}  />}
     </>
   );
 };
