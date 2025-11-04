@@ -1,0 +1,55 @@
+@font-face {
+    font-family: "Inter";
+    src: url("/fonts/Inter-Regular.otf");
+}
+.commonbutton a{
+    text-decoration: none;
+}
+.button {
+    font-family: "Inter" !important;
+    padding: 14px 30px !important;
+    font-weight: 400 !important;   
+    width: 100%; 
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    text-decoration: none;
+}
+
+.commonbutton button:focus{
+    box-shadow: none !important;
+}
+
+@media (width < 992px) {
+    .button {
+       padding: 18px 38px !important;
+        font-weight: 400 !important;
+        font-size: 15px;
+    }
+}
+
+@media (width < 768px) {
+    .button {
+       padding: 16px 36px !important;
+        font-weight: 400 !important;
+        font-size: 15px;
+    }
+}
+
+@media (width < 576px) {
+    .button {
+       padding: 16px 30px !important;
+        font-weight: 400 !important;
+        font-size: 13px;
+    }
+}
+
+@media (width < 430px) {
+    .button {
+       padding: 13.5px 21.5px !important;
+        font-weight: 400 !important;
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,495 @@
+.container {
+  margin: 80px auto;
+  border-radius: 2.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --bs-gutter-x: 0;
+}
+
+.header {
+  background: linear-gradient(to right, #00a0e3, #0080b8);
+  padding: 2.5rem;
+  border-radius: 2.5rem 2.5rem 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.title h3 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 40px;
+}
+.date {
+  background-color: #0080b8;
+  background-color: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+}
+.date h6 {
+  font-weight: 1000;
+  font-size: 1.225rem;
+  margin-bottom: 0;
+}
+
+.content {
+  background-color: #002f42;
+  color: #fff;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  border-radius: 0 0 2.5rem 2.5rem;
+}
+.card {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 160, 227, 0.3);
+  border-radius: 2.5rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.3s;
+}
+.card:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.iconContainer {
+  width: 8%;
+}
+.contentContainer {
+  width: 92%;
+}
+.icon {
+  width: 75px;
+  height: 75px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00a0e3;
+}
+
+.contentHeader {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 12px;
+}
+
+.tag {
+  font-weight: 800;
+  font-size: 0.975rem;
+  line-height: 1.25rem;
+  background-color: #00a0e3;
+  color: #fff;
+  border-radius: 35px;
+  padding: 8px 22px;
+}
+
+.contentTitle {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.contentDetails {
+  margin-top: 0.8rem;
+  color: rgba(183, 216, 220, 1);
+}
+.contentDetails p {
+  font-size: 1.175rem;
+  margin: 1.3rem 0;
+}
+.contentDetails li::marker {
+  color: #00a0e3;
+  font-size: 1.2em;
+}
+.listContainer {
+  display: flex;
+  width: 80%;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 5px;
+  padding-left: 1rem;
+}
+
+.listContainer li {
+  width: 40%;
+  font-size: 1rem;
+}
+
+.divider {
+  border-top-width: 2px;
+  border-color: #fff;
+  opacity: 0.5;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 1.4rem 0;
+  border: none;
+}
+.footerContent {
+  color: rgba(183, 216, 220, 0.85);
+}
+
+.eventContainer {
+  display: flex;
+  gap: 15px;
+}
+.workshops,
+.roundtables {
+  padding: 1.3rem;
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 2rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.3s;
+}
+.workshops h6,
+.roundtables h6 {
+  font-weight: 700;
+  font-size: 20px;
+  color: #fff;
+}
+.listDetails {
+  width: 400px;
+  padding-left: 1.2rem !important;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.listDetails li {
+  color: #fff;
+}
+
+.buttonContainer button {
+  width: 200px;
+  font-size: 18.5px;
+  font-weight: 700;
+  padding: 14.5px !important;
+  border-radius: 29px !important;
+}
+
+@media (max-width: 1400px) {
+  .container {
+    margin: 70px auto;
+  }
+
+  .header {
+    padding: 2.2rem;
+  }
+
+  .title h3 {
+    font-size: 36px;
+  }
+
+  .content {
+    padding: 2.2rem;
+  }
+
+  .listDetails {
+    width: 350px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    margin: 60px auto;
+  }
+
+  .header {
+    padding: 2rem;
+  }
+
+  .title h3 {
+    font-size: 32px;
+  }
+
+  .content {
+    padding: 2rem;
+  }
+
+  .card {
+    padding: 1.2rem;
+    gap: 10px;
+  }
+
+  .icon {
+    width: 65px;
+    height: 65px;
+  }
+
+  .listContainer {
+    width: 90%;
+  }
+
+  .listDetails {
+    width: 300px;
+  }
+
+  .buttonContainer button {
+    width: 200px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    margin: 50px auto;
+  }
+
+  .header {
+    padding: 1.8rem;
+    flex-direction: row;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .title {
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  .title h3 {
+    font-size: 28px;
+  }
+
+  .content {
+    padding: 1.8rem;
+  }
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .buttonContainer button {
+    width: 200px;
+    margin-top: 0 !important;
+    font-size: 16px;
+    padding: 18.5px !important;
+  }
+  .card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .iconContainer {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .contentContainer {
+    width: 100%;
+  }
+
+  .contentHeader {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .eventContainer {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .workshops,
+  .roundtables {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .listDetails {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .listDetails li {
+    width: 45%;
+    text-align: start;
+  }
+  .listContainer {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .listContainer li {
+    width: 45%;
+    text-align: start;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 40px auto;
+  }
+
+  .header {
+    padding: 1.5rem;
+  }
+
+  .title h3 {
+    font-size: 24px;
+  }
+
+  .date h6 {
+    font-size: 1rem;
+  }
+
+  .content {
+    padding: 1.5rem;
+    gap: 20px;
+  }
+
+  .card {
+    padding: 1.2rem;
+  }
+
+  .icon {
+    width: 55px;
+    height: 55px;
+  }
+
+  .contentTitle {
+    font-size: 1.3rem;
+  }
+
+  .contentDetails p {
+    font-size: 1rem;
+  }
+
+  .tag {
+    font-size: 0.85rem;
+    padding: 6px 16px;
+  }
+
+  .workshops h6,
+  .roundtables h6 {
+    font-size: 18px;
+  }
+
+  .listContainer li {
+    width: 45%;
+  }
+  .listDetails {
+    width: 100%;
+  }
+  .listDetails li {
+    width: 45%;
+    text-align: start;
+  }
+  .buttonContainer button {
+    width: 220px;
+    font-size: 14.5px;
+    padding: 18.5px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    margin: 50px auto;
+  }
+
+  .header {
+    padding: 1.2rem;
+    flex-direction: column-reverse;
+    align-items: start;
+  }
+
+  .title h3 {
+    font-size: 22px;
+  }
+
+  .date {
+    padding: 12px 16px;
+  }
+
+  .date h6 {
+    font-size: 0.9rem;
+  }
+
+  .content {
+    padding: 1.1rem;
+    gap: 15px;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .contentTitle {
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+  }
+
+  .contentDetails p {
+    font-size: 0.9rem;
+    margin: 1rem 0;
+  }
+
+  .tag {
+    font-size: 0.75rem;
+    padding: 6px 16px;
+  }
+
+  .workshops,
+  .roundtables {
+    padding: 0.8rem;
+    text-align: start;
+  }
+
+  .workshops h6,
+  .roundtables h6 {
+    font-size: 16px;
+  }
+  .listContainer {
+    padding-left: 3.1rem;
+  }
+  .listContainer li {
+    width: 100%;
+  }
+  .listDetails li {
+    font-size: 0.9rem;
+    width: 100%;
+  }
+
+  .buttonContainer button {
+      width: 220px;
+    font-size: 14.5px;
+    padding: 17.5px !important;
+  }
+
+  .footerContent {
+    font-size: 0.9rem;
+  }
+  .contentHeader {
+    flex-direction: column;
+  }
+}
