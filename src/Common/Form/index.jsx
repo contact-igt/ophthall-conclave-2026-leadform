@@ -3,6 +3,7 @@ import styles from "./styles.module.css";
 import * as Yup from "yup";
 import { useState } from "react";
 import Button from "../Button";
+import { ChevronDown } from "lucide-react";
 
 const Form = ({ handleTogglecontactForm }) => {
   const [loading, setisLoading] = useState(false);
@@ -11,8 +12,8 @@ const Form = ({ handleTogglecontactForm }) => {
       name: "",
       email: "",
       mobile: "",
-      clinic_name: "",
-      medical_council_regno: "",
+      is_doctor: "",
+      designation: "",
     },
     validationSchema: Yup.object({
       name: Yup.string()
@@ -26,17 +27,13 @@ const Form = ({ handleTogglecontactForm }) => {
       mobile: Yup.string()
         .matches(/^[6-9]\d{9}$/, "Enter a valid 10-digit mobile number")
         .required("Mobile number is required"),
+      is_doctor: Yup.string()
+        .required("Please select whether you are a doctor"),
 
-      obg_code: Yup.string()
-        .matches(/^[A-Za-z0-9-]*$/, "Enter a valid OBG code")
-        .nullable(),
-
-      clinic_name: Yup.string()
-        .required("Clinic name is required")
-        .max(80, "Clinic name is too long"),
-
-      medical_council_regno: Yup.string()
-        .matches(/^[A-Za-z0-9/-]+$/, "Enter a valid registration number"),
+      designation: Yup.string()
+        .required("Designation is required")
+        .matches(/^[A-Za-z\s'.-]+$/, "Enter a valid designation (letters only)")
+        .max(50, "Designation is too long"),
     }),
     onSubmit: async (value, Formik) => {
       try {
@@ -49,8 +46,8 @@ const Form = ({ handleTogglecontactForm }) => {
           name: value.name,
           email: value.email,
           mobile: value.mobile,
-          clinic_name: value.clinic_name,
-          medical_council_regno: value.medical_council_regno,
+          is_doctor: value.is_doctor,
+          designation: value.designation,
           ip_address: ipData.ip,
           utm_source: localStorage.getItem("utm_source"),
           utm_medium: localStorage.getItem("utm_medium"),
@@ -65,7 +62,7 @@ const Form = ({ handleTogglecontactForm }) => {
         });
 
         const res = await fetch(
-          "https://script.google.com/macros/s/AKfycbzzcJmxWfD5fKCiz0AcpOnN7rZOAFPKqBLPvKKFum9g_BGxJ7mFWKUayeCMocXzX5GkRg/exec",
+          "https://script.google.com/macros/s/AKfycbyQdLWypKsHpF3w02YfVBvXcMI6iHhhwjGViBfINCsZUxEHMdqoZgC3psX2xRefyLMSmg/exec",
           {
             method: "POST",
             headers: {
@@ -135,25 +132,35 @@ const Form = ({ handleTogglecontactForm }) => {
           )}
         </div>
         <div className={styles.inputgrp}>
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Clinic Name"
-            {...formik.getFieldProps("clinic_name")}
-          />
-          {formik.touched.clinic_name && formik.errors.clinic_name && (
-            <small className="text-danger">{formik.errors.clinic_name}</small>
+          <div className={styles.selectContainer}>
+            <select
+              id="is_doctor"
+              className={`${styles.customSelect} ${formik.values.is_doctor ? styles.hasValue : ""}`}
+              {...formik.getFieldProps("is_doctor")}
+            >
+              <option value="" disabled hidden></option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+            <label htmlFor="is_doctor" className={styles.floatingLabel}>
+              Are you a Doctor?
+            </label>
+            <span className={styles.selectArrow}>  <ChevronDown size={18} color="#00a0e3" /></span>
+          </div>
+
+          {formik.touched.is_doctor && formik.errors.is_doctor && (
+            <small className="text-danger">{formik.errors.is_doctor}</small>
           )}
         </div>
         <div className={styles.inputgrp}>
           <input
             type="text"
             className="form-control"
-            placeholder="Medical Council Reg No"
-            {...formik.getFieldProps("medical_council_regno")}
+            placeholder="Designation"
+            {...formik.getFieldProps("designation")}
           />
-          {formik.touched.medical_council_regno && formik.errors.medical_council_regno && (
-            <small className="text-danger">{formik.errors.medical_council_regno}</small>
+          {formik.touched.designation && formik.errors.designation && (
+            <small className="text-danger">{formik.errors.designation}</small>
           )}
         </div>
         <div className={styles.inputgrp}>

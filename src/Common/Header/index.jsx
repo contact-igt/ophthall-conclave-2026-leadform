@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import { useDispatch } from "react-redux";
 import { setActiveStepNumber } from "@/redux/slices/auth/authSlice";
 
-const Header = ({handleTogglecontactForm}) => {
+const Header = ({ handleTogglecontactForm }) => {
   const router = useRouter();
   const dispatch = useDispatch();
 
@@ -21,11 +21,20 @@ const Header = ({handleTogglecontactForm}) => {
               onClick={() => {
                 router.replace("/");
               }}
-              style={{cursor : "pointer"}}
+              style={{ cursor: "pointer" }}
               className={styles.image}
             />
           </div>
-         {router.pathname !== "/thank-you" && <div
+          {router.pathname === "/thank-you" ? <div
+            className={styles.buttonGroup}
+          >
+            <Button
+              disabled={true}
+              title={"Registered"}
+              colors={"#ffff"}
+              bgcolor={"#00A0E3"}
+            />
+          </div> : <div
             className={styles.buttonGroup}
             onClick={() => {
               dispatch(setActiveStepNumber(1));
