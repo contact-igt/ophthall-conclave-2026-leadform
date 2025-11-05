@@ -5,8 +5,12 @@ import { useState } from "react";
 import Button from "../Button";
 import { ChevronDown } from "lucide-react";
 
+import { saveAs } from "file-saver";
+
 const Form = ({ handleTogglecontactForm }) => {
   const [loading, setisLoading] = useState(false);
+  const agenda_url = localStorage.getItem("agenda_url");
+
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -27,8 +31,9 @@ const Form = ({ handleTogglecontactForm }) => {
       mobile: Yup.string()
         .matches(/^[6-9]\d{9}$/, "Enter a valid 10-digit mobile number")
         .required("Mobile number is required"),
-      is_doctor: Yup.string()
-        .required("Please select whether you are a doctor"),
+      is_doctor: Yup.string().required(
+        "Please select whether you are a doctor"
+      ),
 
       designation: Yup.string()
         .required("Designation is required")
@@ -74,11 +79,23 @@ const Form = ({ handleTogglecontactForm }) => {
 
         if (!res.ok) throw new Error("Submission failed");
 
-
         const data = await res.json();
 
         Formik.resetForm();
         handleTogglecontactForm(false);
+
+        if (agenda_url) {
+          console.log("d,md,", `${agenda_url}`);
+
+          const saveFile = () => {
+            saveAs(
+              `${agenda_url}`,
+              "Ophthall 2026 Conclave Conference Program Agenda.pdf"
+            );
+          };
+          saveFile();
+        }
+
         if (window.location !== undefined) {
           window.location.href = "/thank-you";
         }
@@ -135,7 +152,9 @@ const Form = ({ handleTogglecontactForm }) => {
           <div className={styles.selectContainer}>
             <select
               id="is_doctor"
-              className={`${styles.customSelect} ${formik.values.is_doctor ? styles.hasValue : ""}`}
+              className={`${styles.customSelect} ${
+                formik.values.is_doctor ? styles.hasValue : ""
+              }`}
               {...formik.getFieldProps("is_doctor")}
             >
               <option value="" disabled hidden></option>
@@ -145,7 +164,10 @@ const Form = ({ handleTogglecontactForm }) => {
             <label htmlFor="is_doctor" className={styles.floatingLabel}>
               Are you a Doctor?
             </label>
-            <span className={styles.selectArrow}>  <ChevronDown size={18} color="#00a0e3" /></span>
+            <span className={styles.selectArrow}>
+              {" "}
+              <ChevronDown size={18} color="#00a0e3" />
+            </span>
           </div>
 
           {formik.touched.is_doctor && formik.errors.is_doctor && (
@@ -170,6 +192,7 @@ const Form = ({ handleTogglecontactForm }) => {
             bgcolor="#00a0e3"
             colors="#fff"
             type="submit"
+            url={agenda_url ? agenda_url : ""}
           />
         </div>
       </form>

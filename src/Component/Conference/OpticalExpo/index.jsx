@@ -6,7 +6,7 @@ import Button from "@/Common/Button";
 import { DynamicIcon } from "lucide-react/dynamic";
 import { useRouter } from "next/router";
 
-const OpticalExpo = () => {
+const OpticalExpo = ({ handleTogglecontactForm }) => {
   const router = useRouter();
 
   const handlebadgebtn = () => {
@@ -151,8 +151,9 @@ const OpticalExpo = () => {
             title="Free E-badge"
             bgcolor="#00a0e3"
             colors="#ffffff"
-            link="https://ebadge.in/opthalmology"
-            target="_self"
+            // link="https://ebadge.in/opthalmology"
+            // target="_self"
+            handleTogglecontactForm={handleTogglecontactForm}
           />
         </div>
       </div>
