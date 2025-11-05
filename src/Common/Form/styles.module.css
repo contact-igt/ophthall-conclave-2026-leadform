@@ -1,5 +1,5 @@
 .inputgrp {
-  margin-top: 24px;
+  margin-top: 20px;
 }
 
 .formTopic {
@@ -18,14 +18,143 @@
 .formTopic p {
   margin-bottom: 0.5rem;
 }
-.inputgrp input,
-.inputgrp input:active,
-.inputgrp input:focus {
-  border: 2px solid #b5b6b8;
+.inputgrp input {
+  border: 1.5px solid #b5b6b8;
   padding: 10px;
-  box-shadow: none !important;
+  box-shadow: none;
+  transition: border-color 0.25s ease;
 }
 
+.inputgrp input:focus {
+  border-color: #00a0e3 !important;
+  outline: none;
+  box-shadow: 0 0 0 1.5px rgba(0, 160, 227, 0.15) !important;
+}
+.form-control {
+  border: 3px solid #d1d1d1;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 15px;
+  color: #333;
+  background-color: #fff;
+  appearance: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.selectContainer {
+  position: relative;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.customSelect:focus {
+  border-color: #00a0e3;
+  box-shadow: 0 0 0 2px rgba(0, 160, 227, 0.15);
+  outline: none;
+}
+
+.floatingLabel {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 15px;
+  pointer-events: none;
+  background: #fff;
+  transition: all 0.2s ease;
+  padding: 0 6px;
+}
+
+.customSelect:focus + .floatingLabel,
+.hasValue + .floatingLabel {
+  top: 6px;
+  font-size: 12px;
+  color: #00a0e3;
+}
+
+.selectArrow {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #00a0e3;
+  pointer-events: none;
+}
+
+.customSelect::-ms-expand {
+  display: none;
+}
+.selectContainer {
+  position: relative;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.customSelect {
+  width: 100%;
+  border: 1.7px solid #b5b6b8;
+  border-radius: 8px;
+  padding: 14px 40px 14px 14px;
+  font-size: 15px;
+  color: #333;
+  background-color: #fff;
+  appearance: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-sizing: border-box;
+  height: 52px;
+}
+.selectArrow {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%) rotate(0deg);
+  font-size: 12px;
+  color: #00a0e3;
+  pointer-events: none;
+  transition: transform 0.25s ease;
+}
+
+.customSelect:focus ~ .selectArrow {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.floatingLabel {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 15px;
+  pointer-events: none;
+  background: #fff;
+  transition: all 0.2s ease;
+  padding: 0 6px;
+}
+.customSelect option {
+  color: #333;
+  background-color: #fff;
+  font-size: 15px;
+  padding: 10px; /* works only in Chrome */
+}
+
+.customSelect option:hover {
+  background-color: #e6f7ff;
+  color: #00a0e3;
+}
+
+.customSelect option:disabled {
+  color: #aaa;
+  background-color: #f8f8f8;
+}
+.customSelect:focus + .floatingLabel,
+.hasValue + .floatingLabel {
+  top: 6px;
+  font-size: 12px;
+  color: #00a0e3;
+}
 .inputgrp button {
   width: 100%;
 }
