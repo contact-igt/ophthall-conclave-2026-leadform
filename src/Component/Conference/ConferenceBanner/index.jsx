@@ -53,7 +53,7 @@ const ConferenceBanner = ({
           <div className={styles.tagContainer}>
             <button
               onClick={() => {
-                handleTogglecontactForm;
+                handleTogglecontactForm();
                 localStorage.removeItem("agenda_url");
               }}
               style={{ backgroundColor: "#00a0e3" }}
@@ -61,10 +61,6 @@ const ConferenceBanner = ({
             >
               {data?.buttonText}
             </button>
-            {/* <div onClick={handleScrollToVenue} className={styles.tagItem}>
-              <DynamicIcon name="map-pin" color="#00a0e3" />
-              <p>Navi Mumbai</p>
-            </div> */}
           </div>
         </div>
       </div>
