@@ -1,5 +1,5 @@
 .inputgrp {
-  margin-top: 20px;
+  margin-top: 8.5px;
 }
 
 .formTopic {
@@ -19,8 +19,8 @@
   margin-bottom: 0.5rem;
 }
 .inputgrp input {
-  border: 1.5px solid #b5b6b8;
-  padding: 10px;
+  border: 1.4px solid #b5b6b8;
+  padding: 9.8px;
   box-shadow: none;
   transition: border-color 0.25s ease;
 }
@@ -91,20 +91,23 @@
   width: 100%;
   margin-top: 8px;
 }
-
+.inputgrp input::placeholder {
+  font-size: 14px; 
+   color: #2b2b2b;
+}
 .customSelect {
   width: 100%;
-  border: 1.7px solid #b5b6b8;
+  border: 1.4px solid #b5b6b8;
   border-radius: 8px;
-  padding: 14px 40px 14px 14px;
-  font-size: 15px;
+  padding: 9.5px;
+  font-size: 14px;
   color: #333;
   background-color: #fff;
   appearance: none;
   cursor: pointer;
   transition: all 0.25s ease;
   box-sizing: border-box;
-  height: 52px;
+  height: 50px;
 }
 .selectArrow {
   position: absolute;
@@ -137,7 +140,7 @@
   color: #333;
   background-color: #fff;
   font-size: 15px;
-  padding: 10px; /* works only in Chrome */
+  padding: 10px;
 }
 
 .customSelect option:hover {
@@ -161,7 +164,27 @@
 .inputgrp small {
   font-size: 12.5px;
 }
+.formLabel {
+  display: block;
+  font-size: 14.5px;
+  font-weight: 500;
+  color: #002f42;
+  margin-bottom: 6px;
+}
 
+.form-control {
+  border: 1.6px solid #b5b6b8;
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 15px;
+  transition: all 0.25s ease;
+}
+
+.form-control:focus {
+  border-color: #00a0e3 !important;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 160, 227, 0.12) !important;
+}
 @media (width < 1200px) {
   .formTopic h4 {
     font-size: 20px;

@@ -4,7 +4,6 @@ import * as Yup from "yup";
 import { useState } from "react";
 import Button from "../Button";
 import { ChevronDown } from "lucide-react";
-
 import { saveAs } from "file-saver";
 
 const Form = ({ handleTogglecontactForm }) => {
@@ -116,10 +115,14 @@ const Form = ({ handleTogglecontactForm }) => {
       </div>
       <form onSubmit={formik.handleSubmit}>
         <div className={styles.inputgrp}>
+          <label htmlFor="name" className={styles.formLabel}>
+            Name
+          </label>
           <input
+            id="name"
             type="text"
             className="form-control"
-            placeholder="Name"
+            placeholder="Enter your name"
             {...formik.getFieldProps("name")}
           />
           {formik.touched.name && formik.errors.name && (
@@ -127,10 +130,14 @@ const Form = ({ handleTogglecontactForm }) => {
           )}
         </div>
         <div className={styles.inputgrp}>
+          <label htmlFor="email" className={styles.formLabel}>
+            Email
+          </label>
           <input
+            id="email"
             type="text"
             className="form-control"
-            placeholder="Email"
+            placeholder="Enter your email"
             {...formik.getFieldProps("email")}
           />
           {formik.touched.email && formik.errors.email && (
@@ -138,17 +145,25 @@ const Form = ({ handleTogglecontactForm }) => {
           )}
         </div>
         <div className={styles.inputgrp}>
+          <label htmlFor="mobile" className={styles.formLabel}>
+            Mobile
+          </label>
           <input
+            id="mobile"
             type="text"
             className="form-control"
-            placeholder="Mobile"
+            placeholder="Enter your mobile number"
             {...formik.getFieldProps("mobile")}
           />
           {formik.touched.mobile && formik.errors.mobile && (
             <small className="text-danger">{formik.errors.mobile}</small>
           )}
         </div>
+
         <div className={styles.inputgrp}>
+          <label htmlFor="is_doctor" className={styles.formLabel}>
+            Are you a Doctor?
+          </label>
           <div className={styles.selectContainer}>
             <select
               id="is_doctor"
@@ -157,28 +172,29 @@ const Form = ({ handleTogglecontactForm }) => {
               }`}
               {...formik.getFieldProps("is_doctor")}
             >
-              <option value="" disabled hidden></option>
+              <option value="" disabled hidden>
+                Select an option
+              </option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
-            <label htmlFor="is_doctor" className={styles.floatingLabel}>
-              Are you a Doctor?
-            </label>
             <span className={styles.selectArrow}>
-              {" "}
               <ChevronDown size={18} color="#00a0e3" />
             </span>
           </div>
-
           {formik.touched.is_doctor && formik.errors.is_doctor && (
             <small className="text-danger">{formik.errors.is_doctor}</small>
           )}
         </div>
         <div className={styles.inputgrp}>
+          <label htmlFor="designation" className={styles.formLabel}>
+            Designation
+          </label>
           <input
+            id="designation"
             type="text"
             className="form-control"
-            placeholder="Designation"
+            placeholder="Enter your designation"
             {...formik.getFieldProps("designation")}
           />
           {formik.touched.designation && formik.errors.designation && (
