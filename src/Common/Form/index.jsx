@@ -115,7 +115,9 @@ const Form = ({ handleTogglecontactForm }) => {
       </div>
       <form onSubmit={formik.handleSubmit}>
         <div className={styles.inputgrp}>
-          <label htmlFor="name" className={styles.formLabel}>Name</label>
+          <label htmlFor="name" className={styles.formLabel}>
+            Name
+          </label>
           <input
             id="name"
             type="text"
@@ -128,7 +130,9 @@ const Form = ({ handleTogglecontactForm }) => {
           )}
         </div>
         <div className={styles.inputgrp}>
-          <label htmlFor="email" className={styles.formLabel}>Email</label>
+          <label htmlFor="email" className={styles.formLabel}>
+            Email
+          </label>
           <input
             id="email"
             type="text"
@@ -141,7 +145,9 @@ const Form = ({ handleTogglecontactForm }) => {
           )}
         </div>
         <div className={styles.inputgrp}>
-          <label htmlFor="mobile" className={styles.formLabel}>Mobile</label>
+          <label htmlFor="mobile" className={styles.formLabel}>
+            Mobile
+          </label>
           <input
             id="mobile"
             type="text"
@@ -161,11 +167,14 @@ const Form = ({ handleTogglecontactForm }) => {
           <div className={styles.selectContainer}>
             <select
               id="is_doctor"
-              className={`${styles.customSelect} ${formik.values.is_doctor ? styles.hasValue : ""
-                }`}
+              className={`${styles.customSelect} ${
+                formik.values.is_doctor ? styles.hasValue : ""
+              }`}
               {...formik.getFieldProps("is_doctor")}
             >
-              <option value="" disabled hidden>Select an option</option>
+              <option value="" disabled hidden>
+                Select an option
+              </option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
@@ -178,7 +187,9 @@ const Form = ({ handleTogglecontactForm }) => {
           )}
         </div>
         <div className={styles.inputgrp}>
-          <label htmlFor="designation" className={styles.formLabel}>Designation</label>
+          <label htmlFor="designation" className={styles.formLabel}>
+            Designation
+          </label>
           <input
             id="designation"
             type="text"
@@ -201,7 +212,6 @@ const Form = ({ handleTogglecontactForm }) => {
           />
         </div>
       </form>
-
     </div>
   );
 };
