@@ -26,11 +26,11 @@ const Button = ({
     if (handleTogglecontactForm) handleTogglecontactForm();
 
     if (url) {
-      const saveFile = () => {
-        saveAs(url, "Ophthall 2026 Conclave Conference Program Agenda.pdf");
-      };
-      saveFile();
+      localStorage.setItem("agenda_url", url);
+    } else {
+      localStorage.removeItem("agenda_url");
     }
+    
   };
 
   return (

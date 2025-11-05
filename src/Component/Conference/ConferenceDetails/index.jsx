@@ -63,6 +63,7 @@ const ConferenceDetails = ({ data, handleTogglecontactForm }) => {
             url={
               "/document/Ophthall 2026 Practice Development Program Agenda (1).pdf"
             }
+            handleTogglecontactForm={handleTogglecontactForm}
           />
           <Button
             title={"Register Now"}

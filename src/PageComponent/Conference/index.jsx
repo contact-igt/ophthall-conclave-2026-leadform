@@ -124,7 +124,7 @@ const ConferencePageComponent = ({handleTogglecontactForm}) => {
       ) : (
         ""
       )}
-      <OpticalExpo />
+      <OpticalExpo handleTogglecontactForm={handleTogglecontactForm} />
       <ForWhom data={conferenceData?.forwhom} />
 
       {speakerList?.length > 0 && <Speakers data={speakerList} />}

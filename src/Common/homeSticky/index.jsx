@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./styles.module.css";
 
-export const HomeSticky = ({handleTogglecontactForm}) => {
+export const HomeSticky = ({ handleTogglecontactForm }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -36,10 +36,16 @@ export const HomeSticky = ({handleTogglecontactForm}) => {
             <div className="col-12 col-md-8 d-flex justify-content-center justify-content-md-start align-items-center d-block">
               <div className={styles.meuntitle}>
                 <h5 className="mb-3 text-center">
-                  <button onClick={handleTogglecontactForm}>Early Bird Offer</button>
+                  <button
+                    onClick={() => {
+                      handleTogglecontactForm;
+                      localStorage.removeItem("agenda_url");
+                    }}
+                  >
+                    Early Bird Offer
+                  </button>
                 </h5>
                 <h6>
-                
                   ( Valid till Nov 15th, 2025 – Fees increase by 20% thereafter
                   )
                 </h6>
@@ -51,7 +57,10 @@ export const HomeSticky = ({handleTogglecontactForm}) => {
               >
                 <div className={styles.pricebtn}>
                   <button
-                    onClick={handleTogglecontactForm}
+                    onClick={() => {
+                      handleTogglecontactForm;
+                      localStorage.removeItem("agenda_url");
+                    }}
                     target="_blank"
                     className={`btn text-light ${styles.button}`}
                   >

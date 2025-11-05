@@ -2,7 +2,11 @@ import React, { useEffect, useRef } from "react";
 import styles from "./styles.module.css";
 import { useDispatch } from "react-redux";
 import { DynamicIcon } from "lucide-react/dynamic";
-const ConferenceBanner = ({ data, sperakerLength, handleTogglecontactForm }) => {
+const ConferenceBanner = ({
+  data,
+  sperakerLength,
+  handleTogglecontactForm,
+}) => {
   const handleScrollToSpeaker = () => {
     const speakerSection = document.getElementById("speakers");
     if (speakerSection) {
@@ -48,7 +52,10 @@ const ConferenceBanner = ({ data, sperakerLength, handleTogglecontactForm }) => 
 
           <div className={styles.tagContainer}>
             <button
-              onClick={handleTogglecontactForm}
+              onClick={() => {
+                handleTogglecontactForm;
+                localStorage.removeItem("agenda_url");
+              }}
               style={{ backgroundColor: "#00a0e3" }}
               className={`btn fw-bold  text-white ${styles.button}`}
             >

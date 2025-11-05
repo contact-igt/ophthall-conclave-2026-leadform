@@ -5,7 +5,6 @@ import { footer } from "@/Constant/Footer/footer";
 
 const Footer = () => {
   const router = useRouter();
-  const showWhatsApp = router.pathname == "/";
 
   return (
     <footer className={styles.footer}>
@@ -114,7 +113,7 @@ const Footer = () => {
           ))}
         </div>
       </div>
-      {showWhatsApp && <div className={styles.whatsappicon}>
+     <div className={styles.whatsappicon}>
         <a href="http://wa.me/+919176054051" target="blank">
           <Image
             src={"/assets/whatsapp.png"}
@@ -123,7 +122,7 @@ const Footer = () => {
             alt="whtasapp-logo"
           />
         </a>
-      </div>}
+      </div>
     </footer>
   );
 };
