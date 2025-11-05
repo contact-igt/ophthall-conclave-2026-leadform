@@ -21,7 +21,7 @@ const JoinOphthall = ({ data, title, handleTogglecontactForm }) => {
           <div className={`${styles.buttonGroup} d-flex gap-3`}>
             <button
               onClick={() => {
-                handleTogglecontactForm;
+                handleTogglecontactForm();
                 localStorage.removeItem("agenda_url");
               }}
               className={`btn fw-bold bg-black text-white ${styles.button}`}

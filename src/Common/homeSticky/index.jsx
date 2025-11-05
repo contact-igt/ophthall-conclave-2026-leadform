@@ -38,7 +38,7 @@ export const HomeSticky = ({ handleTogglecontactForm }) => {
                 <h5 className="mb-3 text-center">
                   <button
                     onClick={() => {
-                      handleTogglecontactForm;
+                      handleTogglecontactForm();
                       localStorage.removeItem("agenda_url");
                     }}
                   >
@@ -58,7 +58,7 @@ export const HomeSticky = ({ handleTogglecontactForm }) => {
                 <div className={styles.pricebtn}>
                   <button
                     onClick={() => {
-                      handleTogglecontactForm;
+                      handleTogglecontactForm();
                       localStorage.removeItem("agenda_url");
                     }}
                     target="_blank"
