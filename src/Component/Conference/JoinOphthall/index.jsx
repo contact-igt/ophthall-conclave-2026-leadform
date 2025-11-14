@@ -10,7 +10,7 @@ const JoinOphthall = ({ data, title, handleTogglecontactForm }) => {
     <section className={`${styles.container} container-fluid`}>
       <div className={`${styles.contentContainer} container`}>
         <h2 className={styles.title}>
-          {data?.title} {title || "Conference"}
+          {data?.title} {title || "Conference"} - An AIOS Collaborative Event
         </h2>
         <div
           className={`d-flex flex-column align-items-center justify-content-center gap-4 mt-4`}

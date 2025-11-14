@@ -48,6 +48,7 @@ const ConferenceBanner = ({
             {data?.date}
           </p>
           <h4 className={styles.title}>{data?.title}</h4>
+          <p className={styles.description}>{data?.collabrate}</p>
           <p className={styles.description1}>{data?.description}</p>
 
           <div className={styles.tagContainer}>
