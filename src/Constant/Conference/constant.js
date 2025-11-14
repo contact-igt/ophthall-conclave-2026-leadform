@@ -1,6 +1,7 @@
 export const conferenceData = {
   banner: {
     title: "OPHTHALL CONCLAVE 2026 - 8TH EDITON",
+    collabrate:"An AIOS Collaborative Event",
     date:"9th – 12th January 2026 - Navi Mumbai",
     description: "From Skill to Scale- Innovate, Integrate, Impact",
     buttonText: "Register Now",
@@ -65,6 +66,10 @@ export const conferenceData = {
         id: 14,
         image: "assets/SkyRocket/participant14.png",
       },
+            {
+        id:15,
+        image: "assets/SkyRocket/participant15.jpg",
+      }
     ],
   },
   aboutOphthall: {
@@ -128,7 +133,7 @@ export const conferenceData = {
     ],
   },
   conferenceDetails: {
-    title: "Ophthall 2026 – Conclave",
+    title: "Ophthall 2026 Conclave - An AIOS Collaborative Event",
     date: "January 9th – 8.30 AM to 6.00 PM",
     tagline: "From Skill to Scale – Innovate · Integrate · Impact",
     description:

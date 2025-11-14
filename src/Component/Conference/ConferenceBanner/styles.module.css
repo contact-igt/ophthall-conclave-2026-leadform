@@ -17,7 +17,11 @@
   color: #ffffff;
   padding: 2rem 0;
   overflow: hidden;
-  background: linear-gradient(174deg, rgb(0 0 0 / 82%) 0%, rgb(0 0 0 / 94%) 100%);
+  background: linear-gradient(
+    174deg,
+    rgb(0 0 0 / 82%) 0%,
+    rgb(0 0 0 / 94%) 100%
+  );
   transition: all 0.3s ease;
 }
 
@@ -30,8 +34,6 @@
   object-fit: cover;
   z-index: -1;
 }
-
-
 
 .bannerContent {
   position: relative;
@@ -54,8 +56,6 @@
   font-weight: 500;
 }
 
-
-
 .date {
   position: relative;
   display: inline-block;
@@ -72,9 +72,8 @@
   transform: translateY(0);
   border: none;
   box-shadow: inset 2px 2px 10px rgba(255, 255, 255, 0.1),
-    8px 8px 16px rgba(0, 0, 0, 0.4),
-    -4px -4px 12px rgba(0, 160, 227, 0.15);
-    cursor: pointer;
+    8px 8px 16px rgba(0, 0, 0, 0.4), -4px -4px 12px rgba(0, 160, 227, 0.15);
+  cursor: pointer;
 }
 
 .date::before {
@@ -84,10 +83,12 @@
   left: -75%;
   width: 50%;
   height: 100%;
-  background: linear-gradient(120deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0.35) 50%,
-      rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.35) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
   animation: shine 2s infinite linear;
   border: none;
 }
@@ -106,7 +107,6 @@
   background-color: rgb(22, 55, 66);
   transform: scale(1.05);
 }
-
 
 .title {
   font-family: "Anton", sans-serif;
@@ -128,11 +128,22 @@
   font-size: 1.5rem;
   line-height: 1.6;
   position: relative;
-  padding: 30px 0px;
+  padding: 10px 0px 30px;
 }
-
-
-
+.description {
+  font-size: 4rem;
+  font-weight: 700;
+  padding: 30px 0 0.8rem;
+  line-height: 1.1;
+  letter-spacing: 1.5px;
+  font-family: "Anton", sans-serif;
+  text-transform: uppercase;
+  line-height: 1.5;
+  color: #00a0e3;
+  margin: 0px !important;
+  max-width: 100%;
+  width: 100%;
+}
 .tagContainer {
   display: flex;
   flex-wrap: wrap;
@@ -231,7 +242,9 @@
     font-size: 5rem;
     margin: 0.4rem 0 1.25rem;
   }
-
+  .description {
+    font-size: 3.5rem;
+  }
   .description1::before,
   .description1::after {
     left: 50%;
@@ -263,7 +276,9 @@
     width: 100%;
     padding: 30px 0px;
   }
-
+  .description {
+    font-size: 3rem;
+  }
   .description2 {
     font-size: 16px;
     width: 75%;
@@ -314,7 +329,9 @@
     font-size: 60px;
     margin: 30px auto;
   }
-
+  .description {
+    font-size: 2.8rem;
+  }
   .description1 {
     font-size: 20px;
     width: 100%;
@@ -413,7 +430,9 @@
     font-size: 60px;
     margin: 15px auto;
   }
-
+  .description {
+    font-size: 2.5rem;
+  }
   .description1 {
     font-size: 16px;
     width: 75%;
@@ -423,8 +442,6 @@
     font-size: 14px;
     width: 100%;
   }
-
-
 
   .title {
     font-size: 3.2rem;
@@ -475,7 +492,6 @@
     padding: 1rem 0;
   }
 
-
   .tagContainer {
     gap: 0.8rem;
     margin: 1.25rem 0;
@@ -492,8 +508,6 @@
     transform: translateX(-90%);
   }
 }
-
-
 
 @media (max-width: 576px) {
   .bannerImage img {
@@ -512,7 +526,6 @@
     transform: translate(-50%, -50%);
     z-index: -1;
   }
-
   .container {
     min-height: 80vh;
     height: auto;
@@ -524,6 +537,10 @@
     margin: 0.2rem 0 1rem;
     line-height: 1.2;
   }
+  .description {
+    font-size: 2rem;
+    padding: 15px 0 0.8rem;
+  }
 
   .description1 {
     font-size: 1.1rem;
@@ -533,7 +550,6 @@
     max-width: 100%;
     width: 100%;
   }
-
   .description2 {
     font-size: 12px;
     width: 90%;

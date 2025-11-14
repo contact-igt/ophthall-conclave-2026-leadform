@@ -12,7 +12,7 @@ const AboutOphthall = ({ data, title, description }) => {
         <div className="row">
           <div className="col-lg-6 col-12">
             <div className={`${styles.aboutContent}`}>
-              <Title title={`About ${title} `} />
+              <Title title={`About ${title} - An AIOS Collaborative Event`} />
               <div className={styles.contentContainer}>
                 {description && (
                   <div

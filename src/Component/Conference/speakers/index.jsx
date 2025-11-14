@@ -4,6 +4,113 @@ import styles from "./styles.module.css";
 import { DynamicIcon } from "lucide-react/dynamic";
 
 const Speakers = ({ data }) => {
+    const speakerList = [
+    {
+      id: 1,
+      image: "assets/Conference/Dr. T. Senthil.png",
+      name: "Senthil Tamilarasan",
+      designation: "Founder",
+      organisation: "Ophthall Practice Development",
+    },
+    {
+      id: 2,
+      image: "assets/Conference/Dr Debasis Bhattacharya.PNG",
+      name: "Debasis Bhattacharya",
+      designation: "Founder",
+      organisation: "Disha Eye Hospitals Pvt. Ltd",
+    },
+    {
+      id: 3,
+      image: "assets/Conference/Dr Shridhar Thakur.jpg",
+      name: "Shridhar Thakur",
+      designation: "Founder & CEO",
+      organisation: "Infigo Life Sciences, Mumbai",
+    },
+    {
+      id: 4,
+      image: "assets/Conference/Dharmendra-Satapathy.jpg",
+      name: "Dharmendra Satapathy",
+      designation: "Founder",
+      organisation: "Next Level Education & Glosome Wealth X Pvt. Ltd",
+    },
+    {
+      id: 5,
+      image: "assets/Conference/Mr Vivek Shukla.jpg",
+      name: "Vivek Shukla",
+      designation: "Founder & Managing Partner",
+      organisation: "Surge Growth Partners, Dubai, UAE",
+    },
+    {
+      id: 6,
+      image: "assets/Conference/Dr Saumil Sheth.png",
+      name: "Saumil Sheth",
+      designation: "Director",
+      organisation: "Envision Eye Hospital, Mumbai",
+    },
+    {
+      id: 7,
+      image: "assets/Conference/Dr. (Major) Prashant Kumar Singh Chauhan.jpg",
+      name: "Prashant Chauhan",
+      designation: "Founder",
+      organisation: "Purple Squirrel Strategists, Delhi",
+    },
+    {
+      id: 8,
+      image: "assets/Conference/Dr (Maj) Harikrishnan Vannadil.jpg",
+      name: "(Maj) Hari Krishnan Vannadil",
+      designation: "Founder",
+      organisation: "Eyeris Eye Care",
+    },
+    {
+      id: 9,
+      image: "assets/Conference/Dr Abdullah Zahir.jpg",
+      name: "Dr. Abdullah Zahir",
+      designation: "Managing Director",
+      organisation: "EyeCare Pvt. Ltd., Maldives",
+    },
+    {
+      id: 10,
+      image: "assets/Conference/Mr-S-Rajarajan.jpg",
+      name: "Mr. Rajarajan",
+      designation: "COO (Hospital)",
+      organisation: "Alluri Sitarama Raju Education Society",
+    },
+    {
+      id: 11,
+      image: "assets/Conference/Mr. KrishnaKumar.jpg",
+      name: "Mr. Krishna Kumar",
+      designation: "COO",
+      organisation: "RIO Children’s Hospital",
+    },
+    {
+      id: 12,
+      image: "assets/Conference/Mr. Pratik Malladi.jpg",
+      name: "Mr. Pratik Malladi",
+      designation: "Consultant",
+      organisation: "Fund Raising & M&A",
+    },
+    {
+      id: 13,
+      image: "assets/Conference/Mr. Shourav Das.jpg",
+      name: "Mr. Shourav Das",
+      designation: "Practice Development",
+      organisation: "Alcon",
+    },
+    {
+      id: 14,
+      image: "assets/Conference/Mr. Mohammed Ilias.jpg",
+      name: "Mr. Mohammed Ilias",
+      designation: "Founder",
+      organisation: "BCC Health Care Branding",
+    },
+    {
+      id: 15,
+      image: "assets/Conference/Akhil.JPG",
+      name: "Mr. Akhil Dave",
+      designation: "Founder & Principal Consultant, Founder Chairman",
+      organisation: "Trizone Healthcare Consultants LLP, AHMP India Foundation",
+    },
+  ]
   return (
     <section id="speakers" className={styles.speakersec}>
       <div className="container">
@@ -11,7 +118,7 @@ const Speakers = ({ data }) => {
 
         <div className={styles.speakerList}>
           <div className={styles.speakerGrid}>
-            {data?.map((item, i) => (
+            {speakerList?.map((item, i) => (
               <div className={styles.speakerCard} key={i}>
                 <div className={styles.figureWrap}>
                   <img
