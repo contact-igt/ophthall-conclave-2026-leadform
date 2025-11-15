@@ -12,12 +12,28 @@ const Header = ({ handleTogglecontactForm }) => {
   return (
     <header>
       <div className="container">
-        <div className="d-flex justify-content-between align-items-center py-3">
-          <div className={styles.brandlogo}>
+        <div className="d-flex justify-content-md-between justify-content-center align-items-center py-3">
+          <div
+            className={`${styles.brandlogo} d-flex align-items-center gap-1`}
+          >
             <Image
               width={175}
               height={60}
-              src={"https://res.cloudinary.com/ophthall/image/upload/v1761373013/Ophthall_2026-removebg-preview_s2kmjd.png"}
+              src={
+                "https://res.cloudinary.com/ophthall/image/upload/v1761373013/Ophthall_2026-removebg-preview_s2kmjd.png"
+              }
+              onClick={() => {
+                router.replace("/");
+              }}
+              style={{ cursor: "pointer" }}
+              className={styles.image}
+            />
+            <h3>X</h3>
+
+            <Image
+              width={70}
+              height={70}
+              src={"/assets/SkyRocket/participant15.jpg"}
               onClick={() => {
                 router.replace("/");
               }}
@@ -25,28 +41,30 @@ const Header = ({ handleTogglecontactForm }) => {
               className={styles.image}
             />
           </div>
-          {router.pathname === "/thank-you" ? <div
-            className={styles.buttonGroup}
-          >
-            <Button
-              disabled={true}
-              title={"Registered"}
-              colors={"#ffff"}
-              bgcolor={"#00A0E3"}
-            />
-          </div> : <div
-            className={styles.buttonGroup}
-            onClick={() => {
-              dispatch(setActiveStepNumber(1));
-            }}
-          >
-            <Button
-              title={"Register Now"}
-              colors={"#ffff"}
-              bgcolor={"#00A0E3"}
-              handleTogglecontactForm={handleTogglecontactForm}
-            />
-          </div>}
+          {router.pathname === "/thank-you" ? (
+            <div className={`${styles.buttonGroup} d-none d-md-block`}>
+              <Button
+                disabled={true}
+                title={"Registered"}
+                colors={"#ffff"}
+                bgcolor={"#00A0E3"}
+              />
+            </div>
+          ) : (
+            <div
+              className={`${styles.buttonGroup} d-none d-md-block`}
+              onClick={() => {
+                dispatch(setActiveStepNumber(1));
+              }}
+            >
+              <Button
+                title={"Register Now"}
+                colors={"#ffff"}
+                bgcolor={"#00A0E3"}
+                handleTogglecontactForm={handleTogglecontactForm}
+              />
+            </div>
+          )}
         </div>
       </div>
     </header>
