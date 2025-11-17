@@ -46,7 +46,7 @@ export const HomeSticky = ({ handleTogglecontactForm }) => {
                   </button>
                 </h5>
                 <h6>
-                  ( Valid till Nov 13th, 2025 – Fees increase by 20% thereafter
+                  ( Valid till Nov 30th, 2025 – Fees increase by 20% thereafter
                   )
                 </h6>
               </div>
