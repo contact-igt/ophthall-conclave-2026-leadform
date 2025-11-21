@@ -1,7 +1,6 @@
 import { HomeSticky } from "@/Common/homeSticky";
 import { MetaTitle } from "@/Common/MetaTitle";
 import AboutOphthall from "@/Component/Conference/AboutOphthall";
-import AssociatePartner from "@/Component/Conference/AssociatePartner";
 import ConferenceBanner from "@/Component/Conference/ConferenceBanner";
 import ConferenceDetails from "@/Component/Conference/ConferenceDetails";
 import ConferenceTestimonial from "@/Component/Conference/ConferenceTestimonial";
@@ -21,13 +20,13 @@ import { clearAuthData, closePopup } from "@/redux/slices/auth/authSlice";
 import { useDispatch, useSelector } from "react-redux";
 import Speakers from "@/Component/Conference/speakers";
 import Gallery from "@/Component/Conference/Gallery";
-import { Popup } from "@/Common/Popup";
-import WelcomeCard from "@/Common/WelcomeCard";
 import { useGetAllEventByConfernceIdQuery } from "@/hooks/useEventQuery";
 import { useGetAllSpeakerByConfernceIdQuery } from "@/hooks/useSpeakerQuery";
 import OpticalExpo from "@/Component/Conference/OpticalExpo";
-import Form from "@/Common/Form";
-const ConferencePageComponent = ({handleTogglecontactForm}) => {
+import Cordinates from "@/Component/Conference/Coordinates";
+import AssociatePartner from "@/Component/Conference/AssociatePartner";
+
+const ConferencePageComponent = ({ handleTogglecontactForm }) => {
   const dispatch = useDispatch();
   const [session, setsession] = useState();
   const [speakerList, setspeakerList] = useState();
@@ -99,7 +98,8 @@ const ConferencePageComponent = ({handleTogglecontactForm}) => {
         sperakerLength={speakerList?.length}
         handleTogglecontactForm={handleTogglecontactForm}
       />
-      <AssociatePartner data={conferenceData?.participants} />
+      <AssociatePartner partnerlist={conferenceData?.assocaite_partner?.partner_list}
+        sponserlist={conferenceData?.assocaite_partner?.sponser_list} />
       <AboutOphthall
         data={conferenceData?.aboutOphthall}
         title={conference?.title}
@@ -135,7 +135,7 @@ const ConferencePageComponent = ({handleTogglecontactForm}) => {
 
       <VenueDetails data={conferenceData?.venueDetails} />
       <OrganizingChairman data={conferenceData?.organizingChairman} />
-
+       <Cordinates data={conferenceData?.participants} />
       <JoinOphthall
         data={conferenceData?.joinOphthall}
         title={conference?.title}
@@ -145,7 +145,7 @@ const ConferencePageComponent = ({handleTogglecontactForm}) => {
       {/* <Popup open={isModalOpen} onClose={closeModal}>
         <WelcomeCard closeModal={closeModal} />
       </Popup> */}
-      {showSticky && <HomeSticky handleTogglecontactForm={handleTogglecontactForm}  />}
+      {showSticky && <HomeSticky handleTogglecontactForm={handleTogglecontactForm} />}
     </>
   );
 };

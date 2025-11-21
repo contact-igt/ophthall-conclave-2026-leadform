@@ -33,7 +33,8 @@ const AboutOphthall = ({ data, title, description }) => {
                 >
                   <div className={`${styles.eventinfo}`}>
                     <h3>
-                      <CountUp start={0} end={data?.value} duration={5} />{data?.span}
+                      <CountUp start={0} end={data?.value} duration={5} />
+                      {data?.span}
                     </h3>
                     <p>{data?.label}</p>
                   </div>
@@ -47,14 +48,14 @@ const AboutOphthall = ({ data, title, description }) => {
       </div>
 
       <div className={styles.aboutCards}>
-          {data?.cardList?.map((item) => (
-            <div className={styles.cardContent}>
-              <img src={item.image} className={styles.cardImage} alt="" />
-              <div className={styles.overlay}></div>
-              <p className={styles.description}>{item?.description}</p>
-            </div>
-          ))}
-        </div>
+        {data?.cardList?.map((item) => (
+          <div className={styles.cardContent}>
+            <img src={item.image} className={styles.cardImage} alt="" />
+            <div className={styles.overlay}></div>
+            <p className={styles.description}>{item?.description}</p>
+          </div>
+        ))}
+      </div>
     </section>
   );
 };

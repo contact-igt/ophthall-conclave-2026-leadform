@@ -1,73 +1,36 @@
-import React from 'react';
-import Slider from "react-slick";
-
+import Title from "@/Common/Title";
 import styles from "./styles.module.css";
 
-const AssociatePartner = ({ data }) => {
-
-    var settings = {
-        dots: false,
-        infinite: true,
-        speed: 1000,
-        arrows: false,
-        loop: true,
-        slidesToShow: 8,
-        slidesToScroll: 1,
-        autoplay: true,
-        speed: 2000, 
-        autoplaySpeed:0, 
-        cssEase: "linear",
-        responsive: [
-            {
-                breakpoint: 575,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    initialSlide: 3,
-                },
-            },
-            {
-                breakpoint: 700,
-                settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 4,
-                    initialSlide: 4,
-                },
-            },
-
-            {
-                breakpoint: 1100,
-                settings: {
-                    slidesToShow: 5,
-                    slidesToScroll: 5,
-                    initialSlide: 5,
-                },
-            },
-
-            {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 6,
-                    slidesToScroll: 6,
-                    initialSlide: 6,
-                },
-            },
-        ],
-    };
-
-    return (
-        <section className={`${styles.container} container-fluid`}>
-            <div className={styles.patreonslider}>
-                <Slider {...settings} className="w-100">
-                    {data?.participantList?.map((item, index) => (
-                        <div className={styles.patreonsimg} key={index}>
-                            <img src={item?.image} className="img-fluid" />
-                        </div>
-                    ))}
-                </Slider>
+const AssociatePartner = ({ partnerlist, sponserlist }) => {
+  return (
+    <section className={styles.partner}>
+      <div className="container">
+        <div className="row">
+          <div className="col-xl-6">
+            <Title title={"Associate Partners"} />
+            <div className="d-flex justify-content-center flex-wrap align-items-center gap-5 mt-md-5 mt-4  ">
+              {partnerlist?.map((data, i) => (
+                <div className={`${styles.partnerimg} text-center`}>
+                  <img src={data?.image} className="img-fluid" />
+                </div>
+              ))}
             </div>
-        </section>
-    );
+          </div>
+
+          <div className="col-xl-6 mt-5 pt-2 pt-lg-5 pt-xl-0 mt-xl-0">
+            <Title title={"Associate Sponsers"} />
+            <div className="d-flex justify-content-center flex-wrap align-items-center gap-5 mt-md-5 mt-4 ">
+              {sponserlist?.map((data, i) => (
+                <div className={`${styles.partnerimg} text-center`}>
+                  <img src={data?.image} className="img-fluid" />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default AssociatePartner;

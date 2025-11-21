@@ -46,13 +46,11 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.1) 0%,
-    rgba(0, 0, 0, 0.4) 50%,
-    rgba(0, 0, 0, 0.7) 70%,
-    rgba(0, 0, 0, 0.9) 100%
-  );
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.1) 0%,
+      rgba(0, 0, 0, 0.4) 50%,
+      rgba(0, 0, 0, 0.7) 70%,
+      rgba(0, 0, 0, 0.9) 100%);
   border-radius: 10px;
   z-index: 1;
 }
@@ -211,6 +209,7 @@
   .aboutContent h2 {
     text-align: center !important;
   }
+
   .cardContent {
     width: 200px;
   }
@@ -218,7 +217,7 @@
 
 @media (width < 768px) {
   .contentContainer {
-    text-align: justify;
+    text-align: start;
   }
 
   .cardsection {
@@ -246,6 +245,7 @@
   .cardContent {
     width: 220px;
   }
+
   .description {
     font-size: 15px;
   }

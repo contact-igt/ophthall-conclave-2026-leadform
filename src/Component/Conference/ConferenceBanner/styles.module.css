@@ -17,11 +17,9 @@
   color: #ffffff;
   padding: 2rem 0;
   overflow: hidden;
-  background: linear-gradient(
-    174deg,
-    rgb(0 0 0 / 82%) 0%,
-    rgb(0 0 0 / 94%) 100%
-  );
+  background: linear-gradient(174deg,
+      rgb(0 0 0 / 82%) 0%,
+      rgb(0 0 0 / 94%) 100%);
   transition: all 0.3s ease;
 }
 
@@ -83,12 +81,10 @@
   left: -75%;
   width: 50%;
   height: 100%;
-  background: linear-gradient(
-    120deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.35) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(120deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.35) 50%,
+      rgba(255, 255, 255, 0) 100%);
   animation: shine 2s infinite linear;
   border: none;
 }
@@ -130,13 +126,14 @@
   position: relative;
   padding: 10px 0px 30px;
 }
+
 .description {
   font-size: 4rem;
   font-weight: 700;
   padding: 30px 0 0.8rem;
   line-height: 1.1;
   letter-spacing: 1.5px;
-   font-family: "Anton", sans-serif;
+  font-family: "Anton", sans-serif;
   text-transform: uppercase;
   line-height: 1.5;
   color: #00a0e3;
@@ -144,13 +141,15 @@
   max-width: 100%;
   width: 100%;
 }
-.description img{
+
+.description img {
   width: 58px;
   height: 58px;
   border-radius: 50%;
   margin-right: 20px;
   object-fit: cover;
 }
+
 .tagContainer {
   display: flex;
   flex-wrap: wrap;
@@ -230,6 +229,33 @@
   background: rgba(255, 255, 255, 0.2);
 }
 
+
+.partnername h5 {
+  font-size: 18px;
+  margin-bottom: 3px;
+}
+
+.partnername p {
+  font-size: 13px;
+  color: rgb(249, 201, 28);
+}
+
+.combo {
+  border-left: 2px solid #ffff;
+  margin-right: 10px;
+}
+
+.main1 img {
+  width: 250px;
+  height: 100px;
+}
+
+.main2 img {
+  width: 100px;
+  height: 100px;
+}
+
+
 @media (max-width: 1400px) {
   .container {
     min-height: 80vh;
@@ -249,13 +275,16 @@
     font-size: 5rem;
     margin: 0.4rem 0 1.25rem;
   }
-  .description{
+
+  .description {
     font-size: 3.5rem;
   }
-  .description img{
+
+  .description img {
     width: 58px;
     height: 58px;
   }
+
   .description1::before,
   .description1::after {
     left: 50%;
@@ -287,13 +316,16 @@
     width: 100%;
     padding: 30px 0px;
   }
-  .description{
+
+  .description {
     font-size: 3rem;
   }
-  .description img{
+
+  .description img {
     width: 56px;
     height: 56px;
   }
+
   .description2 {
     font-size: 16px;
     width: 75%;
@@ -344,13 +376,16 @@
     font-size: 60px;
     margin: 30px auto;
   }
-  .description{
+
+  .description {
     font-size: 2.8rem;
   }
-  .description img{
+
+  .description img {
     width: 54px;
     height: 54px;
   }
+
   .description1 {
     font-size: 20px;
     width: 100%;
@@ -412,12 +447,31 @@
   .button {
     padding: 0.9rem 2.2rem !important;
   }
+
+  .main1 img {
+    width: 180px;
+    height: 80px;
+  }
+
+  .main2 img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .partnername h5 {
+    font-size: 14px;
+  }
+
+  .partnername p {
+    font-size: 10px;
+    margin: 3px 0px;
+  }
 }
 
 @media (max-width: 768px) {
   .container {
     position: relative;
-    height: 120vh;
+    height: 190vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -449,13 +503,16 @@
     font-size: 60px;
     margin: 15px auto;
   }
-  .description{
+
+  .description {
     font-size: 2.5rem;
   }
-  .description img{
+
+  .description img {
     width: 50px;
     height: 50px;
   }
+
   .description1 {
     font-size: 16px;
     width: 75%;
@@ -549,6 +606,7 @@
     transform: translate(-50%, -50%);
     z-index: -1;
   }
+
   .container {
     min-height: 80vh;
     height: auto;
@@ -560,14 +618,17 @@
     margin: 0.2rem 0 1rem;
     line-height: 1.2;
   }
-  .description{
+
+  .description {
     font-size: 2rem;
-      padding: 15px 0 0.8rem;
+    padding: 15px 0 0.8rem;
   }
-  .description img{
+
+  .description img {
     width: 46px;
     height: 46px;
   }
+
   .description1 {
     font-size: 1.1rem;
     padding: 0.8rem 0;
@@ -576,6 +637,7 @@
     max-width: 100%;
     width: 100%;
   }
+
   .description2 {
     font-size: 12px;
     width: 90%;
@@ -632,8 +694,31 @@
 
 
 @media (max-width: 450px) {
- .description img{
+  .description img {
     width: 42px;
     height: 42px;
- }
+  }
+
+  .main1 img {
+    width: 120px;
+    height: 50px;
+    object-fit: contain;
+
+  }
+
+  .main2 img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+
+  }
+
+  .partnername h5 {
+    font-size: 10px;
+  }
+
+  .partnername p {
+    font-size: 6px;
+    margin: 3px 0px;
+  }
 }
