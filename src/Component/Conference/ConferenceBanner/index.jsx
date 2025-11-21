@@ -2,11 +2,8 @@ import React, { useEffect, useRef } from "react";
 import styles from "./styles.module.css";
 import { useDispatch } from "react-redux";
 import { DynamicIcon } from "lucide-react/dynamic";
-const ConferenceBanner = ({
-  data,
-  sperakerLength,
-  handleTogglecontactForm,
-}) => {
+import Image from "next/image";
+const ConferenceBanner = ({ data, sperakerLength }) => {
   const handleScrollToSpeaker = () => {
     const speakerSection = document.getElementById("speakers");
     if (speakerSection) {
@@ -47,21 +44,50 @@ const ConferenceBanner = ({
           >
             {data?.date}
           </p>
+          <div className="d-flex justify-content-center gap-3 mt-xl-5 my-4">
+            <div className={styles.main1}>
+              <img
+                src={"/assets/ophthall_white.png"}
+                style={{ cursor: "pointer" }}
+                alt="logo"
+              />
+            </div>
+
+            <div className={styles.combo}></div>
+
+            <div
+              className={`${styles.main2} d-flex align-items-center gap- md-3 gap-2 `}
+            >
+              <img
+                width={80}
+                height={80}
+                src={"/assets/SkyRocket/participant15.jpg"}
+                style={{ cursor: "pointer", borderRadius: "100px" }}
+                className={styles.image}
+              />
+              <div className={`${styles.partnername} text-center`}>
+                <h5>All India</h5>
+                <h5>Ophthalmological Society</h5>
+                <p>FROM DARKNESS TO LIGHT</p>
+              </div>
+            </div>
+          </div>
+
           <h4 className={styles.title}>{data?.title}</h4>
+
           <p className={styles.description}>{data?.collabrate}</p>
+
           <p className={styles.description1}>{data?.description}</p>
 
           <div className={styles.tagContainer}>
-            <button
-              onClick={() => {
-                handleTogglecontactForm();
-                localStorage.removeItem("agenda_url");
-              }}
-              style={{ backgroundColor: "#00a0e3" }}
-              className={`btn fw-bold  text-white ${styles.button}`}
-            >
-              {data?.buttonText}
-            </button>
+            <a href="/register">
+              <button
+                style={{ backgroundColor: "#00a0e3" }}
+                className={`btn fw-bold  text-white ${styles.button}`}
+              >
+                {data?.buttonText}
+              </button>
+            </a>
           </div>
         </div>
       </div>

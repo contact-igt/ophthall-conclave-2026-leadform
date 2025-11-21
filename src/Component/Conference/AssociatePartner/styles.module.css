@@ -1,13 +1,40 @@
-/* styles.module.css */
-.patreonsimg img{
-    width: 95px;
-    height: 75px;
-    object-fit: contain;
-}
-.OurPatreons{
-    margin-top: 20px;
+.partner {
+    padding: 80px 0px;
 }
 
-.patreonslider{
-    padding : 25px 0px;
+.partnerimg img {
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
+}
+
+
+@media (width < 992px) {
+
+    .partnerimg img {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+    }
+
+}
+
+@media (width < 768px) {
+    .partner {
+        padding: 50px 0px;
+    }
+
+}
+
+
+
+
+@media (width < 576px) {
+
+    .partnerimg img {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+    }
+
 }

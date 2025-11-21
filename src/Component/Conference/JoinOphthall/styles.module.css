@@ -12,8 +12,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: start;
-  margin: 90px auto 0px;
+  margin: 0px auto 0px;
 }
+
 .contentContainer {
   width: 85%;
   display: flex;
@@ -54,17 +55,19 @@
   font-size: 17px;
 }
 
-.inputgroup{
-    width: 100%;
-    height: 65px;
+.inputgroup {
+  width: 100%;
+  height: 65px;
 }
-.inputgroup input{
-    height: 100%;
-    border-radius: 15px;
-    padding-left: 30px;
-    font-size: 20px;
-    font-weight: 400;
+
+.inputgroup input {
+  height: 100%;
+  border-radius: 15px;
+  padding-left: 30px;
+  font-size: 20px;
+  font-weight: 400;
 }
+
 .description1 {
   font-family: 'Plus Jakarta Sans';
   font-weight: 700;
@@ -85,114 +88,138 @@
   text-align: center;
   margin-bottom: 10px !important;
 }
-.buttonGroup{
+
+.buttonGroup {
   margin-top: 30px;
 }
-.button{
+
+.button {
   padding: 33px 74px;
   border-radius: 50px;
   font-size: 20px;
 }
+
 @media (max-width: 992px) {
   .container {
     width: 100% !important;
-    margin: 80px auto 50px;
+    margin: 0px;
     padding-top: 20px;
     height: 500px;
   }
+
   .contentContainer {
     width: 100% !important;
     padding: 0;
     margin: 20px auto;
   }
+
   .title {
     font-size: 50px;
     width: 90%;
     margin-bottom: 10px;
     text-align: center !important;
   }
+
   .form {
     width: 100%;
     margin-top: 30px;
   }
-  .inputgroup{
+
+  .inputgroup {
     height: 60px;
   }
-  .inputgroup input{
+
+  .inputgroup input {
     font-size: 13.5px;
   }
-   .content{
+
+  .content {
     width: 100%;
-   }
-.button{
-  padding: 25px 60px;
-  border-radius: 50px;
-  font-size: 20px;
-}
-.description1,.description2{
-    width: 100%;
-}
-.description1{
-    font-size: 22px;
-}
-.description2{
+  }
+
+  .button {
+    padding: 25px 60px;
+    border-radius: 50px;
     font-size: 20px;
-}
+  }
+
+  .description1,
+  .description2 {
+    width: 100%;
+  }
+
+  .description1 {
+    font-size: 22px;
+  }
+
+  .description2 {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 768px) {
   .container {
     width: 100% !important;
-    margin: 80px auto 50px;
     padding-top: 40px;
     height: 500px;
   }
+
   .contentContainer {
     width: 100% !important;
     padding: 0;
     margin: 20px auto;
   }
+
   .title {
     font-size: 40px;
     width: 90%;
     margin-bottom: 10px;
     text-align: center !important;
   }
+
   .form {
     width: 100%;
     margin-top: 20px;
   }
-  .inputgroup{
+
+  .inputgroup {
     height: 50px;
   }
-  .inputgroup input{
+
+  .inputgroup input {
     font-size: 13.5px;
   }
-   .button{
+
+  .button {
     width: 100%;
-  padding: 25px 50px;
-  border-radius: 50px;
-  font-size: 20px;
-}
-.description1,.description2{
-    width: 100%;
-}
-.description1{
+    padding: 25px 50px;
+    border-radius: 50px;
     font-size: 20px;
-}
-.description2{
+  }
+
+  .description1,
+  .description2 {
+    width: 100%;
+  }
+
+  .description1 {
+    font-size: 20px;
+  }
+
+  .description2 {
     font-size: 16px;
-}
-.buttonGroup{
+  }
+
+  .buttonGroup {
     flex-direction: column;
-}
+  }
 }
 
 
-@media (max-width:420px){
-    .container {
-      padding-top: 45px;
-   min-height: 550px;
-   height: auto;
+@media (max-width:420px) {
+  .container {
+    padding-top: 45px;
+    min-height: 550px;
+    height: auto;
   }
 }

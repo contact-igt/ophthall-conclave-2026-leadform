@@ -7,6 +7,36 @@ export const conferenceData = {
     buttonText: "Register Now",
     image: "assets/Conference/banner.jpg",
   },
+  assocaite_partner: {
+    partner_list: [
+      {
+        id: 1,
+        image: "/assets/AHPI.png",
+      },
+      {
+        id: 2,
+        image: "/assets/Telemedicine Society of India.PNG",
+      },
+      {
+        id: 3,
+        image: "/assets/AHMP.png",
+      },
+    ],
+    sponser_list: [
+      {
+        id: 1,
+        image: "/assets/Disha.png",
+      },
+      {
+        id: 2,
+        image: "/assets/Alcon_Logo_2019.svg.png",
+      },
+      {
+        id: 3,
+        image: "/assets/HealthGraph.png",
+      },
+    ],
+  },
   participants: {
     title: "Participants of. 2025 Programme",
     participantList: [
@@ -67,9 +97,9 @@ export const conferenceData = {
         image: "assets/SkyRocket/participant14.png",
       },
             {
-        id:15,
+        id: 15,
         image: "assets/SkyRocket/participant15.jpg",
-      }
+      },
     ],
   },
   aboutOphthall: {
