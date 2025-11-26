@@ -19,7 +19,9 @@
   overflow: hidden;
   margin-bottom: 8px;
 }
-
+.speakerDetails h6:first-child{
+  font-weight: bold;
+}
 .speakerDetail h6 {
   font-size: 15px;
   display: -webkit-box;
@@ -80,7 +82,7 @@
   gap: 10px;
   border-radius: 16px;
   margin: -13px 16px 16px 16px;
-  height: 150px;
+  height: 175px;
   text-align: center;
   transition: background-color 0.05s ease, color 0.05s ease;
 }
@@ -89,11 +91,19 @@
   color: #002f42;
 }
 .speakerDetails {
-  margin-top: 14px;
+  margin-top: 25px;
   height: 50px;
 }
+.speakerDetails h6:first-child{
+  font-size: 14.2px;
+  font-weight: bold;
+}
 .speakerDetails h6{
+    margin-top: 2px !important;
     line-height: 1.25;
+}
+.speakerDetails h6:last-child{
+  font-size: 12px;
 }
 .infoText h4 {
   font-size: 18px;
