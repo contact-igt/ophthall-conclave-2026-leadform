@@ -3,11 +3,7 @@ import styles from "./styles.module.css";
 import { useDispatch } from "react-redux";
 import { DynamicIcon } from "lucide-react/dynamic";
 import Image from "next/image";
-<<<<<<< Updated upstream
-const ConferenceBanner = ({ data, sperakerLength }) => {
-=======
 const ConferenceBanner = ({ data, sperakerLength, handleTogglecontactForm }) => {
->>>>>>> Stashed changes
   const handleScrollToSpeaker = () => {
     const speakerSection = document.getElementById("speakers");
     if (speakerSection) {
