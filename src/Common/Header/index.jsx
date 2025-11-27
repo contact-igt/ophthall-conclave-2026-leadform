@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import { useDispatch } from "react-redux";
 import { setActiveStepNumber } from "@/redux/slices/auth/authSlice";
 
-const Header = () => {
+const Header = ({handleTogglecontactForm}) => {
   const router = useRouter();
   const dispatch = useDispatch();
 
@@ -49,7 +49,7 @@ const Header = () => {
               title={"Register Now"}
               colors={"#ffff"}
               bgcolor={"#00A0E3"}
-              link={"/register"}
+              handleTogglecontactForm={handleTogglecontactForm}
             />
           </div>
         </div>
