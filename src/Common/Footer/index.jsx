@@ -17,7 +17,7 @@ const Footer = () => {
                   <Image
                     width={175}
                     height={63}
-                    src={"https://res.cloudinary.com/ophthall/image/upload/v1761373013/Ophthall_2026-removebg-preview_s2kmjd.png"}
+                    src={"/assets/Ophthall_2026-logo.webp"}
                     style={{ marginBottom: "10px" , cursor :"pointer" }}
                     onClick={() => {
                       router.replace("/");
