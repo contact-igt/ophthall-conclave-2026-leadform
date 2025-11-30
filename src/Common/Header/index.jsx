@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import { useDispatch } from "react-redux";
 import { setActiveStepNumber } from "@/redux/slices/auth/authSlice";
 
-const Header = ({handleTogglecontactForm}) => {
+const Header = ({ handleTogglecontactForm }) => {
   const router = useRouter();
   const dispatch = useDispatch();
 
@@ -17,9 +17,7 @@ const Header = ({handleTogglecontactForm}) => {
             <Image
               width={150}
               height={90}
-              src={
-                "https://res.cloudinary.com/ophthall/image/upload/v1761373013/Ophthall_2026-removebg-preview_s2kmjd.png"
-              }
+              src={"/assets/Ophthall_2026-logo.webp"}
               onClick={() => {
                 router.replace("/");
               }}
