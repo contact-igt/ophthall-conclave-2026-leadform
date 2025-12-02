@@ -1,8 +1,8 @@
 export const conferenceData = {
   banner: {
     title: "OPHTHALL CONCLAVE 2026 - 8TH EDITON",
-    collabrate:"An AIOS Collaborative Event",
-    date:"9th – 12th January 2026 - Navi Mumbai",
+    collabrate: "An AIOS Collaborative Event",
+    date: "9th – 12th January 2026 - Navi Mumbai",
     description: "From Skill to Scale- Innovate, Integrate, Impact",
     buttonText: "Register Now",
     image: "assets/Conference/banner.jpg",
@@ -20,6 +20,10 @@ export const conferenceData = {
       {
         id: 3,
         image: "/assets/AHMP.png",
+      },
+      {
+        id: 4,
+        image: "/assets/caho-main-logo.png",
       },
     ],
     sponser_list: [
@@ -96,7 +100,7 @@ export const conferenceData = {
         id: 14,
         image: "assets/SkyRocket/participant14.png",
       },
-            {
+      {
         id: 15,
         image: "assets/SkyRocket/participant15.jpg",
       },
@@ -194,7 +198,7 @@ export const conferenceData = {
         icon: "dollar-sign",
       },
     ],
-    price : "NON-MEMBER ₹ 4,999 | LIFE MEMBER ₹ 3,999 ( INCLUDING OF GST )"
+    price: "NON-MEMBER ₹ 4,999 | LIFE MEMBER ₹ 3,999 ( INCLUDING OF GST )",
   },
   conclaveOverview: {
     title: "Conclave Overview",
