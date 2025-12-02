@@ -18,7 +18,7 @@ const AssociatePartner = ({ partnerlist, sponserlist }) => {
           </div>
 
           <div className="col-xl-6 mt-5 pt-2 pt-lg-5 pt-xl-0 mt-xl-0">
-            <Title title={"Associate Sponsers"} />
+            <Title title={"Associate Sponsors"} />
             <div className="d-flex justify-content-center flex-wrap align-items-center gap-5 mt-md-5 mt-4 ">
               {sponserlist?.map((data, i) => (
                 <div className={`${styles.partnerimg} text-center`}>
