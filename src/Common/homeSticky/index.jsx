@@ -33,9 +33,9 @@ export const HomeSticky = ({ handleTogglecontactForm }) => {
       >
         <div className="container">
           <div className="row gap-2 gap-md-0 py-2 py-md-3">
-            <div className="col-12 col-md-8 d-flex justify-content-center justify-content-md-start align-items-center d-block">
+            <div className="col-12 col-md-7 d-flex justify-content-center justify-content-md-start align-items-center d-block">
               <div className={styles.meuntitle}>
-                <h5 className="mb-3 text-center">
+                {/* <h5 className="mb-3 text-center">
                   <button
                     onClick={() => {
                       handleTogglecontactForm();
@@ -44,14 +44,15 @@ export const HomeSticky = ({ handleTogglecontactForm }) => {
                   >
                     Early Bird Offer
                   </button>
+                </h5> */}
+                <h5>
+                  {/* ( Valid till Nov 30th, 2025 – Fees increase by 20% thereafter
+                  ) */}
+                                    Ophthall 2026 Practice Development Conclave - An AIOS Collaborative Event, Jan 9-12 CIDCO Exhibition Centre Mumbai
                 </h5>
-                <h6>
-                  ( Valid till Nov 30th, 2025 – Fees increase by 20% thereafter
-                  )
-                </h6>
               </div>
             </div>
-            <div className="col-12 col-md-4 d-flex align-items-md-center justify-content-md-end justify-content-center">
+            <div className="col-12 col-md-5 d-flex align-items-md-center justify-content-md-end justify-content-center">
               <div
                 className={`${styles.pricingContainer} d-flex justify-content-lg-end justify-content-center  align-items-center gap-2 gap-md-3 py-md-1 py-1`}
               >
