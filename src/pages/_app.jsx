@@ -16,9 +16,10 @@ import { useState } from "react";
 import WelcomeCard from "@/Common/WelcomeCard";
 import Form from "@/Common/Form";
 import useUTMSource from "@/hooks/useUTMSource";
+import Preloader from "@/Common/Preloader";
 
 export default function App({ Component, pageProps }) {
-  useUTMSource()
+  useUTMSource();
   const [open, setOpen] = useState(false);
   const handleTogglecontactForm = (value) => {
     if (typeof value === "boolean") {
@@ -34,9 +35,13 @@ export default function App({ Component, pageProps }) {
         <Provider store={store}>
           <PersistGate loading={null} persistor={persistor}>
             <SnackbarProvider maxSnack={3}>
+              <Preloader />
               <Header handleTogglecontactForm={handleTogglecontactForm} />
               <MetaTitle />
-              <Component {...pageProps} handleTogglecontactForm={handleTogglecontactForm} />
+              <Component
+                {...pageProps}
+                handleTogglecontactForm={handleTogglecontactForm}
+              />
               <Footer />
               <Popup open={open} onClose={() => handleTogglecontactForm(false)}>
                 <button
@@ -46,8 +51,7 @@ export default function App({ Component, pageProps }) {
                 >
                   ✖
                 </button>
-                <Form handleTogglecontactForm={handleTogglecontactForm}
-                />
+                <Form handleTogglecontactForm={handleTogglecontactForm} />
               </Popup>
             </SnackbarProvider>
           </PersistGate>
