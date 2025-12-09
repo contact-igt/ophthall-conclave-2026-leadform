@@ -11,20 +11,24 @@ export const conferenceData = {
     partner_list: [
       {
         id: 1,
-        image: "/assets/AHPI.png",
+        image: "/assets/YOSI.png",
       },
       {
         id: 2,
-        image: "/assets/Telemedicine Society of India.PNG",
+        image: "/assets/AHPI.png",
       },
       {
         id: 3,
-        image: "/assets/AHMP.png",
+        image: "/assets/Telemedicine Society of India.PNG",
       },
       {
         id: 4,
-        image: "/assets/caho-main-logo.png",
+        image: "/assets/AHMP.png",
       },
+      {
+        id: 5,
+        image: "/assets/caho-main-logo.png",
+      }
     ],
     sponser_list: [
       {
