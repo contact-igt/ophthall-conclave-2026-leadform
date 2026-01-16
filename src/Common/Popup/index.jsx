@@ -1,13 +1,13 @@
 import React, { useEffect, useRef } from "react";
 import styles from "./styles.module.css";
 
-export const Popup = ({ children, open, onClose, variant = "default",  }) => {
+export const Popup = ({ children, open, onClose, isClose="false", variant = "default" }) => {
   const wrapperRef = useRef(null);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
-        if (typeof onClose === "function") {
+        if (typeof onClose === "function" && isClose) {
           onClose();
         }
       }
@@ -24,17 +24,14 @@ export const Popup = ({ children, open, onClose, variant = "default",  }) => {
 
   return (
     <div
-      className={`${styles.bg} ${
-        variant === "video" ? styles.videoBg : ""
-      }`}
+      className={`${styles.bg}`}
     >
       <div
-        className={`${styles.wrapper} ${
-          variant === "video" ? styles.videoWrapper : ""
-        }`}
+        className={`${styles.wrapper} ${variant == "secondary" ? styles.secondary : ""}`}
         ref={wrapperRef}
       >
         {children}
+       { isClose && <button className={styles.closeButton} onClick={onClose} > ✖</button>}
       </div>
     </div>
   );

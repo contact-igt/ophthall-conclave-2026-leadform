@@ -25,6 +25,8 @@ import { useGetAllSpeakerByConfernceIdQuery } from "@/hooks/useSpeakerQuery";
 import OpticalExpo from "@/Component/Conference/OpticalExpo";
 import Cordinates from "@/Component/Conference/Coordinates";
 import AssociatePartner from "@/Component/Conference/AssociatePartner";
+import { Popup } from "@/Common/Popup";
+import ThankYouPopup from "@/Common/ThankYouPopup";
 
 const ConferencePageComponent = ({ handleTogglecontactForm }) => {
   const dispatch = useDispatch();
@@ -32,6 +34,7 @@ const ConferencePageComponent = ({ handleTogglecontactForm }) => {
   const [speakerList, setspeakerList] = useState();
   const [showSticky, setShowSticky] = useState(false);
   const { data: conference } = useConferenceQuery();
+  const [showThankYouPopup, setShowThankYouPopup] = useState(false);
   const { mutate: eventMutate } = useGetAllEventByConfernceIdQuery();
   const { mutate: speakerMutate } = useGetAllSpeakerByConfernceIdQuery();
 
@@ -66,6 +69,14 @@ const ConferencePageComponent = ({ handleTogglecontactForm }) => {
       );
     }
   }, [conference?.id]);
+
+  const closeThankYouPopup = () => {
+    setShowThankYouPopup(false);
+  };
+
+  useEffect(() => {
+    setShowThankYouPopup(true);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -135,7 +146,7 @@ const ConferencePageComponent = ({ handleTogglecontactForm }) => {
 
       <VenueDetails data={conferenceData?.venueDetails} />
       <OrganizingChairman data={conferenceData?.organizingChairman} />
-       <Cordinates data={conferenceData?.participants} />
+      <Cordinates data={conferenceData?.participants} />
       <JoinOphthall
         data={conferenceData?.joinOphthall}
         title={conference?.title}
@@ -145,7 +156,10 @@ const ConferencePageComponent = ({ handleTogglecontactForm }) => {
       {/* <Popup open={isModalOpen} onClose={closeModal}>
         <WelcomeCard closeModal={closeModal} />
       </Popup> */}
-      {showSticky && <HomeSticky handleTogglecontactForm={handleTogglecontactForm} />}
+      <Popup open={showThankYouPopup} onClose={closeThankYouPopup} variant="secondary" isClose={false}>
+        <ThankYouPopup />
+      </Popup>
+      {/* {showSticky && <HomeSticky handleTogglecontactForm={handleTogglecontactForm} />} */}
     </>
   );
 };

@@ -59,7 +59,7 @@
   position: fixed;
   right: 20px;
   bottom: 140px;
-  z-index: 9999;
+  z-index: 999;
 }
 .whatsappicon img{
     border-radius: 30px;
