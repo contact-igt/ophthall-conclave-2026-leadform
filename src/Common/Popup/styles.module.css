@@ -4,29 +4,37 @@
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(15px);
-  z-index: 99;
-}
-
-.videoBg {
   background: rgba(0, 0, 0, 0.75);
-  /* darker overlay for video */
   backdrop-filter: blur(5px);
+  z-index: 1001;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Centers vertically if space allows */
+  overflow-y: auto;
+  /* Allows scrolling */
+  padding: 20px;
+  /* Prevents content touching edges */
 }
 
 .wrapper {
   height: fit-content;
   width: 500px;
   display: inline-block;
-  padding: 18px 30px;
+  padding: 40px 40px;
   border-radius: 15px;
   background: #fff;
-  position: fixed;
-  top: 50%;
-  left: 50%;
+  position: relative;
+  /* Changed from fixed */
+  /* top: 50%; left: 50%; transform: ... REMOVED */
   background-color: #fff;
-  transform: translate(-50%, -50%);
+  margin: auto;
+  /* Ensures centering in scrollable flex container */
+}
+
+.secondary {
+  width: 95%;
+  max-width: 1200px;
 }
 
 .videoWrapper {
@@ -45,6 +53,29 @@
   margin-right: -30px;
   font-size: 30px;
   cursor: pointer;
+}
+
+.closeButton {
+  border: none;
+  font-size: 20px;
+  color: white;
+  background-color: #00a0e3;
+  padding: 4.5px 12px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+.closeButton:hover {
+  background-color: #008ac0;
+}
+
+.closeButton:focus {
+  outline: none;
 }
 
 @media (max-width: 500px) {

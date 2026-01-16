@@ -170,6 +170,84 @@ export const conferenceData = {
       },
     ],
   },
+  conferenceHighlights2026:{
+    conferenceHighlightsListSlider1:[
+      {
+        img: "assets/thankyouPopup/sliderImg1.JPG",
+        alt: "image1"
+      },
+      {
+        img: "assets/thankyouPopup/sliderImg2.JPG",
+        alt: "image2"
+      },
+      {
+        img: "assets/thankyouPopup/sliderImg3.JPG",
+        alt: "image3"
+      },
+      {
+        img: "assets/thankyouPopup/sliderImg4.JPG",
+        alt: "image4"
+      },
+      {
+        img: "assets/thankyouPopup/sliderImg5.JPG",
+        alt: "image5"
+      },
+      {
+        img: "assets/thankyouPopup/sliderImg6.JPG",
+        alt: "image6"
+      },
+      {
+        img: "assets/thankyouPopup/sliderImg7.JPG",
+        alt: "image7"
+      },
+      {
+        img: "assets/thankyouPopup/sliderImg8.JPG",
+        alt: "image8"
+      },
+        {
+        img: "assets/thankyouPopup/sliderImg9.JPG",
+        alt: "image9"
+      },
+    ],
+    conferenceHighlightsListSlider2:[
+      {
+        img: "assets/thankyouPopup/sliderImg10.JPG",
+        alt: "image10"
+      },
+      {
+        img: "assets/thankyouPopup/sliderImg11.JPG",
+        alt: "image11"
+      },
+      {
+        img: "assets/thankyouPopup/sliderImg12.JPG",
+        alt: "image12"
+      },
+      {
+        img: "assets/thankyouPopup/sliderImg13.JPG",
+        alt: "image13"
+      },
+      {
+        img: "assets/thankyouPopup/sliderImg14.JPG",
+        alt: "image14"
+      },
+      {
+        img: "assets/thankyouPopup/sliderImg15.JPG",
+        alt: "image15"
+      },
+      {
+        img: "assets/thankyouPopup/sliderImg16.JPG",
+        alt: "image16"
+      },
+      {
+        img: "assets/thankyouPopup/sliderImg17.JPG",
+        alt: "image17"
+      },
+      {
+        img: "assets/thankyouPopup/sliderImg18.JPG",
+        alt: "image18"
+      },
+    ],
+  },
   conferenceDetails: {
     title: "Ophthall 2026 Conclave - An AIOS Collaborative Event",
     date: "January 9th – 8.30 AM to 6.00 PM",
